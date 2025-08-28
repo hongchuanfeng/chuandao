@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>图片格式转换-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>Image Format Converter - Chandao Tools</title>
+	<meta name="keywords" content="online tool collection, Chandao Tools">
+	<meta name="description" content="Chandao Tools is a collection of free, no-login online utilities across life, dev, encoding/decoding, encryption, images, and fun.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -257,21 +257,21 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding</a>
+			<a href="../dev.html" class="nav-category">💻 Dev Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Fun Tools</a>
 		</div>
 	</div>
 </nav>
 
-<h1 style="text-align: center">图片格式转换</h1>
+<h1 style="text-align: center">Image Format Converter</h1>
 <div class="container">
 	<select class="format-select">
-		<option value="">选择要转换的格式</option>
+		<option value="">Select output format</option>
 		<option value="png">PNG</option>
 		<option value="jpeg">JPEG</option>
 		<option value="webp">WEBP</option>
@@ -280,54 +280,54 @@
 
 	<div class="upload-area" id="dropZone">
 		<img id="preview" style="max-width: 100%; display: none;">
-		<div id="uploadText">点击上传，或将图片拖拽到此处</div>
+		<div id="uploadText">Click to upload, or drag an image here</div>
 	</div>
 
 	<div class="image-info">
 		<table>
 			<tr>
-				<th>图片属性</th>
-				<th>值</th>
-				<th>描述</th>
+				<th>Property</th>
+				<th>Value</th>
+				<th>Description</th>
 			</tr>
 			<tr>
-				<td>图片大小</td>
-				<td id="fileSize">上传后显示</td>
-				<td>单位：KB</td>
+				<td>File size</td>
+				<td id="fileSize">Shown after upload</td>
+				<td>Unit: KB</td>
 			</tr>
 			<tr>
-				<td>图片类型</td>
-				<td id="fileType">上传后显示</td>
-				<td>如：jpg</td>
+				<td>Type</td>
+				<td id="fileType">Shown after upload</td>
+				<td>e.g., jpg</td>
 			</tr>
 			<tr>
-				<td>图片宽度</td>
-				<td id="imageWidth">上传后显示</td>
-				<td>单位：px</td>
+				<td>Width</td>
+				<td id="imageWidth">Shown after upload</td>
+				<td>Unit: px</td>
 			</tr>
 			<tr>
-				<td>图片高度</td>
-				<td id="imageHeight">上传后显示</td>
-				<td>单位：px</td>
+				<td>Height</td>
+				<td id="imageHeight">Shown after upload</td>
+				<td>Unit: px</td>
 			</tr>
 			<tr>
-				<td>图片帧数</td>
-				<td id="frameCount">上传后显示</td>
-				<td>仅gif才有</td>
+				<td>Frame count</td>
+				<td id="frameCount">Shown after upload</td>
+				<td>GIF only</td>
 			</tr>
 		</table>
 	</div>
 
-	<button class="convert-btn" id="convertBtn">开始转换并下载</button>
+	<button class="convert-btn" id="convertBtn">Convert and download</button>
 
 	<div class="info-box">
-		<div class="info-title">关于图片格式转换介绍:</div>
+		<div class="info-title">About this tool:</div>
 		<ul class="info-list">
-			<li>1. 此工具可以将任意格式的图片转为png,jpeg,webp,bmp等格式。</li>
-			<li>2. 先上传图片本地图片，并会显示图片的基础信息。</li>
-			<li>3. 选择你要转换的格式，比如png,jpeg...</li>
-			<li>4. 点击"开始转换并下载"按钮即可下载转换后的图片。</li>
-			<li>5. 注意: 本工具只在前台运行，不会将您上传的图片上传至服务器，请放心使用。</li>
+			<li>1. Convert images to PNG, JPEG, WebP, BMP, etc.</li>
+			<li>2. Upload an image to see its basic info.</li>
+			<li>3. Choose the output format.</li>
+			<li>4. Click "Convert and download" to get the result.</li>
+			<li>5. Note: All processing runs locally in your browser.</li>
 		</ul>
 	</div>
 </div>
@@ -396,11 +396,11 @@
 
 	convertBtn.addEventListener('click', () => {
 		if (!preview.src) {
-			alert('请先上传图片');
+			alert('Please upload an image first');
 			return;
 		}
 		// 实际转换功能需要后端支持或使用特定的图片处理库
-		alert('转换失败');
+		alert('Conversion failed');
 	});
 </script>
 </body>

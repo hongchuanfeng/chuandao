@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>图片拼接工具-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>Image Stitching Tool - Chandao Tools</title>
+	<meta name="keywords" content="online tool collection, Chandao Tools">
+	<meta name="description" content="Chandao Tools is a collection of free, no-login online utilities across life, dev, encoding/decoding, encryption, images, and fun.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -286,13 +287,13 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding</a>
+			<a href="../dev.html" class="nav-category">💻 Dev Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Fun Tools</a>
 		</div>
 	</div>
 </nav>
@@ -304,52 +305,52 @@
 		<div class="max-w-5xl mx-auto bg-white rounded-xl shadow-soft p-6 md:p-8">
 			<!-- 标题和描述 -->
 			<div class="text-center mb-8">
-				<h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-gray-800 mb-3">轻松拼接你的图片</h2>
-				<p class="text-gray-600 max-w-2xl mx-auto">上传多张图片，选择拼接方式，生成一张无缝拼接的图片。支持横向和纵向拼接，自定义间距和背景。</p>
+				<h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-gray-800 mb-3">Stitch your images easily</h2>
+				<p class="text-gray-600 max-w-2xl mx-auto">Upload multiple images, choose stitching direction, spacing, and background to generate a single combined image.</p>
 			</div>
 
 			<!-- 上传区域 -->
 			<div class="mb-8">
 				<div id="drop-area" class="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center transition-custom hover:border-primary cursor-pointer bg-neutral">
 					<i class="fa fa-cloud-upload-alt text-4xl text-gray-400 mb-4"></i>
-					<h3 class="text-lg font-medium text-gray-700 mb-2">拖放图片到这里</h3>
-					<p class="text-gray-500 mb-4">或者</p>
+					<h3 class="text-lg font-medium text-gray-700 mb-2">Drag and drop images here</h3>
+					<p class="text-gray-500 mb-4">or</p>
 					<label class="inline-block bg-primary hover:bg-primary/90 text-white font-medium py-2 px-6 rounded-md cursor-pointer transition-custom">
-						<i class="fa fa-folder-open mr-2"></i>选择图片
+						<i class="fa fa-folder-open mr-2"></i>Select images
 						<input type="file" id="file-input" class="hidden" multiple accept="image/*">
 					</label>
-					<p class="mt-4 text-sm text-gray-500">支持 JPG, PNG, WebP 格式</p>
+					<p class="mt-4 text-sm text-gray-500">Supports JPG, PNG, WebP</p>
 				</div>
 
 				<!-- 已上传图片预览 -->
 				<div id="preview-container" class="mt-6 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 hidden">
-					<h4 class="col-span-full text-lg font-medium text-gray-700 mb-2">已上传图片</h4>
+					<h4 class="col-span-full text-lg font-medium text-gray-700 mb-2">Uploaded Images</h4>
 					<div id="image-previews" class="col-span-full grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4"></div>
 				</div>
 			</div>
 
 			<!-- 拼接选项 -->
 			<div class="mb-8">
-				<h3 class="text-lg font-medium text-gray-700 mb-4">拼接选项</h3>
+				<h3 class="text-lg font-medium text-gray-700 mb-4">Stitching Options</h3>
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 					<!-- 拼接方向 -->
 					<div>
-						<label class="block text-sm font-medium text-gray-700 mb-2">拼接方向</label>
+						<label class="block text-sm font-medium text-gray-700 mb-2">Direction</label>
 						<div class="flex space-x-4">
 							<label class="flex items-center space-x-2 cursor-pointer">
 								<input type="radio" name="direction" value="horizontal" checked class="w-4 h-4 text-primary focus:ring-primary">
-								<span>横向</span>
+								<span>Horizontal</span>
 							</label>
 							<label class="flex items-center space-x-2 cursor-pointer">
 								<input type="radio" name="direction" value="vertical" class="w-4 h-4 text-primary focus:ring-primary">
-								<span>纵向</span>
+								<span>Vertical</span>
 							</label>
 						</div>
 					</div>
 
 					<!-- 间距设置 -->
 					<div>
-						<label for="spacing" class="block text-sm font-medium text-gray-700 mb-2">图片间距 (像素)</label>
+						<label for="spacing" class="block text-sm font-medium text-gray-700 mb-2">Spacing (px)</label>
 						<input type="range" id="spacing" min="0" max="50" value="10" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-primary">
 						<div class="flex justify-between text-xs text-gray-500 mt-1">
 							<span>0</span>
@@ -360,7 +361,7 @@
 
 					<!-- 背景颜色 -->
 					<div>
-						<label for="background" class="block text-sm font-medium text-gray-700 mb-2">背景颜色</label>
+						<label for="background" class="block text-sm font-medium text-gray-700 mb-2">Background</label>
 						<div class="flex items-center space-x-4">
 							<input type="color" id="background" value="#ffffff" class="w-10 h-10 rounded-full border-0 cursor-pointer">
 							<input type="text" id="background-text" value="#ffffff" class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary">
@@ -369,12 +370,12 @@
 
 					<!-- 图片质量 -->
 					<div>
-						<label for="quality" class="block text-sm font-medium text-gray-700 mb-2">输出质量 (JPG)</label>
+						<label for="quality" class="block text-sm font-medium text-gray-700 mb-2">Output quality (JPG)</label>
 						<input type="range" id="quality" min="0.1" max="1" step="0.1" value="0.9" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-primary">
 						<div class="flex justify-between text-xs text-gray-500 mt-1">
-							<span>低</span>
+							<span>Low</span>
 							<span id="quality-value">0.9</span>
-							<span>高</span>
+							<span>High</span>
 						</div>
 					</div>
 				</div>
@@ -383,20 +384,20 @@
 			<!-- 操作按钮 -->
 			<div class="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-8">
 				<button id="clear-btn" class="w-full sm:w-auto px-6 py-2 border border-gray-300 rounded-md text-gray-700 font-medium hover:bg-gray-50 transition-custom flex items-center justify-center">
-					<i class="fa fa-trash mr-2"></i>清除图片
+					<i class="fa fa-trash mr-2"></i>Clear images
 				</button>
 				<button id="stitch-btn" class="w-full sm:w-auto px-6 py-2 bg-secondary hover:bg-secondary/90 text-white font-medium rounded-md transition-custom flex items-center justify-center">
-					<i class="fa fa-magic mr-2"></i>开始拼接
+					<i class="fa fa-magic mr-2"></i>Start stitching
 				</button>
 			</div>
 
 			<!-- 拼接结果 -->
 			<div id="result-container" class="hidden">
-				<h3 class="text-lg font-medium text-gray-700 mb-4">拼接结果</h3>
+				<h3 class="text-lg font-medium text-gray-700 mb-4">Result</h3>
 				<div class="bg-neutral rounded-lg p-4 flex flex-col items-center">
 					<div id="loading-indicator" class="hidden mb-4">
 						<div class="w-10 h-10 border-4 border-gray-200 border-t-primary rounded-full animate-spin mx-auto"></div>
-						<p class="text-gray-600 mt-2">正在处理图片...</p>
+						<p class="text-gray-600 mt-2">Processing images...</p>
 					</div>
 					<div id="result-image-container" class="relative max-w-full overflow-auto">
 						<img id="result-image" src="" alt="拼接结果" class="max-w-full rounded shadow-md">
@@ -586,7 +587,7 @@
 	// 图片拼接功能
 	function stitchImages() {
 		if (uploadedImages.length < 2) {
-			alert('请上传至少两张图片进行拼接');
+			alert('Please upload at least two images to stitch');
 			return;
 		}
 

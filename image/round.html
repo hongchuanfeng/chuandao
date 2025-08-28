@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>图片圆角处理工具-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>Rounded Corners Tool - Chandao Tools</title>
+	<meta name="keywords" content="online tool collection, Chandao Tools">
+	<meta name="description" content="Chandao Tools is a collection of free, no-login online utilities across life, dev, encoding/decoding, encryption, images, and fun.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -307,7 +307,7 @@
 			<!-- 左侧控制面板 -->
 			<div class="bg-white rounded-xl shadow-lg p-6 transform hover:shadow-xl transition-all duration-300">
 				<h2 class="text-xl font-bold text-neutral mb-4 flex items-center">
-					<i class="fa-solid fa-sliders mr-2 text-primary"></i>圆角设置
+					<i class="fa-solid fa-sliders mr-2 text-primary"></i>Corner Radius Settings
 				</h2>
 
 				<div class="space-y-6">
@@ -316,43 +316,43 @@
 						<input type="file" id="imageUpload" accept="image/*" class="hidden">
 						<label for="imageUpload" class="cursor-pointer block">
 							<i class="fa-solid fa-cloud-arrow-up text-4xl text-gray-400 mb-3"></i>
-							<p class="text-gray-600">点击或拖拽图片到此处上传</p>
-							<p class="text-sm text-gray-400 mt-1">支持 JPG, PNG, WebP 格式</p>
+							<p class="text-gray-600">Click or drag an image here to upload</p>
+							<p class="text-sm text-gray-400 mt-1">Supports JPG, PNG, WebP</p>
 						</label>
 					</div>
 
 					<!-- 圆角控制滑块 -->
 					<div class="space-y-3">
 						<div class="flex justify-between items-center">
-							<label for="radiusSlider" class="text-gray-700 font-medium">圆角半径:</label>
+							<label for="radiusSlider" class="text-gray-700 font-medium">Radius:</label>
 							<span id="radiusValue" class="text-primary font-semibold min-w-[40px] text-center">0px</span>
 						</div>
 						<input type="range" id="radiusSlider" min="0" max="100" value="0"
 							   class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-primary">
 						<div class="flex justify-between text-xs text-gray-500">
-							<span>无圆角</span>
-							<span>圆形</span>
+							<span>No radius</span>
+							<span>Circle</span>
 						</div>
 					</div>
 
 					<!-- 预设选项 -->
 					<div>
-						<h3 class="text-sm font-medium text-gray-700 mb-2">圆角预设:</h3>
+						<h3 class="text-sm font-medium text-gray-700 mb-2">Presets:</h3>
 						<div class="flex flex-wrap gap-2">
 							<button class="preset-btn px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-md text-sm transition-colors" data-radius="0">
-								无圆角
+								No radius
 							</button>
 							<button class="preset-btn px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-md text-sm transition-colors" data-radius="4">
-								小圆角
+								Small
 							</button>
 							<button class="preset-btn px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-md text-sm transition-colors" data-radius="8">
-								中等圆角
+								Medium
 							</button>
 							<button class="preset-btn px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-md text-sm transition-colors" data-radius="16">
-								大圆角
+								Large
 							</button>
 							<button class="preset-btn px-3 py-1 bg-gray-100 hover:bg-gray-200 rounded-md text-sm transition-colors" data-radius="50">
-								圆形
+								Circle
 							</button>
 						</div>
 					</div>
@@ -360,10 +360,10 @@
 					<!-- 操作按钮 -->
 					<div class="flex gap-3">
 						<button id="downloadBtn" class="flex-1 bg-primary hover:bg-primary/90 text-white font-medium py-2 px-4 rounded-lg transition-all duration-300 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed">
-							<i class="fa-solid fa-download mr-2"></i>下载图片
+							<i class="fa-solid fa-download mr-2"></i>Download image
 						</button>
 						<button id="resetBtn" class="bg-gray-200 hover:bg-gray-300 text-gray-700 font-medium py-2 px-4 rounded-lg transition-all duration-300 flex items-center justify-center">
-							<i class="fa-solid fa-refresh mr-2"></i>重置
+							<i class="fa-solid fa-refresh mr-2"></i>Reset
 						</button>
 					</div>
 				</div>
@@ -372,14 +372,14 @@
 			<!-- 右侧预览区域 -->
 			<div class="bg-white rounded-xl shadow-lg p-6 flex flex-col transform hover:shadow-xl transition-all duration-300">
 				<h2 class="text-xl font-bold text-neutral mb-4 flex items-center">
-					<i class="fa-solid fa-eye mr-2 text-primary"></i>预览效果
+					<i class="fa-solid fa-eye mr-2 text-primary"></i>Preview
 				</h2>
 
 				<div class="flex-grow flex flex-col items-center justify-center">
 					<div id="previewContainer" class="w-full max-w-md aspect-[4/3] bg-gray-100 rounded-lg overflow-hidden flex items-center justify-center relative mb-4 shadow-inner">
 						<div id="noImageState" class="text-center p-6">
 							<i class="fa-solid fa-image text-5xl text-gray-300 mb-3"></i>
-							<p class="text-gray-500">请上传一张图片开始处理</p>
+							<p class="text-gray-500">Please upload an image to start</p>
 						</div>
 						<img id="previewImage" src="../static/images/preve.jpeg" alt="预览图片" class="max-w-full max-h-full object-contain rounded-[0px] transition-all duration-500 ease-out">
 						<div id="loadingIndicator" class="absolute inset-0 bg-black/50 flex items-center justify-center hidden">
@@ -390,13 +390,13 @@
 					<div class="mt-4 w-full">
 						<div class="grid grid-cols-2 gap-3">
 							<div class="bg-gray-50 p-3 rounded-lg">
-								<p class="text-xs text-gray-500">原始图片</p>
+								<p class="text-xs text-gray-500">Original</p>
 								<div id="originalPreview" class="w-full aspect-[4/3] bg-gray-100 rounded overflow-hidden">
 									<img id="originalImage" src="../static/images/preve.jpeg" alt="原始图片" class="w-full h-full object-cover rounded-[0px]">
 								</div>
 							</div>
 							<div class="bg-gray-50 p-3 rounded-lg">
-								<p class="text-xs text-gray-500">处理后图片</p>
+								<p class="text-xs text-gray-500">Processed</p>
 								<div id="processedPreview" class="w-full aspect-[4/3] bg-gray-100 rounded overflow-hidden">
 									<img id="processedImage" src="../static/images/preve.jpeg" alt="处理后图片" class="w-full h-full object-cover rounded-[0px] transition-all duration-500">
 								</div>
@@ -434,7 +434,7 @@
 			if (e.target.files && e.target.files[0]) {
 				const file = e.target.files[0];
 				if (!file.type.match('image.*')) {
-					alert('请上传图片文件！');
+					alert('Please upload an image file');
 					return;
 				}
 

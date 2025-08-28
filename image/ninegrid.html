@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>九宫格切图工具-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>Grid Splitter (3x3) - Chandao Tools</title>
+	<meta name="keywords" content="online tool collection, Chandao Tools">
+	<meta name="description" content="Chandao Tools is a collection of free, no-login online utilities across life, dev, encoding/decoding, encryption, images, and fun.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -296,13 +296,13 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding</a>
+			<a href="../dev.html" class="nav-category">💻 Dev Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Fun Tools</a>
 		</div>
 	</div>
 </nav>
@@ -313,9 +313,9 @@
 		<!-- 头部 -->
 		<header class="text-center mb-12">
 			<h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold text-neutral mb-4 text-shadow bg-clip-text text-transparent bg-gradient-to-r from-primary to-accent">
-				九宫格切图工具
+				3x3 Grid Splitter
 			</h1>
-			<p class="text-gray-600 text-lg max-w-2xl mx-auto">上传一张图片，将其切割成9个均等的部分，轻松创建九宫格拼图效果。</p>
+			<p class="text-gray-600 text-lg max-w-2xl mx-auto">Upload an image to split it into 9 equal pieces, creating a 3x3 grid.</p>
 		</header>
 
 		<!-- 主内容区 -->
@@ -324,23 +324,23 @@
 			<section class="lg:col-span-1 bg-white rounded-2xl shadow-xl p-6 hover-scale">
 				<div class="text-center mb-6">
 					<i class="fa-solid fa-cloud-upload text-5xl text-primary mb-4"></i>
-					<h2 class="text-xl font-bold text-neutral mb-2">上传图片</h2>
-					<p class="text-gray-500">选择一张图片开始切割</p>
+					<h2 class="text-xl font-bold text-neutral mb-2">Upload Image</h2>
+					<p class="text-gray-500">Select an image to begin splitting</p>
 				</div>
 
 				<div id="drop-area" class="border-2 border-dashed border-primary/30 rounded-xl p-8 text-center cursor-pointer hover:border-primary transition-all duration-300 mb-6">
 					<input type="file" id="file-input" accept="image/*" class="hidden">
 					<label for="file-input" class="cursor-pointer">
 						<i class="fa-solid fa-image text-4xl text-primary/60 mb-3"></i>
-						<p class="text-gray-600 mb-2">点击或拖拽图片到这里</p>
-						<p class="text-sm text-gray-400">支持 JPG, PNG, GIF 格式</p>
+						<p class="text-gray-600 mb-2">Click or drag an image here</p>
+						<p class="text-sm text-gray-400">Supports JPG, PNG, GIF</p>
 					</label>
 				</div>
 
 				<div id="preview-container" class="hidden mb-6">
-					<h3 class="text-lg font-semibold text-neutral mb-3">图片预览</h3>
+					<h3 class="text-lg font-semibold text-neutral mb-3">Preview</h3>
 					<div class="relative overflow-hidden rounded-lg border border-gray-200">
-						<img id="preview-image" src="" alt="预览图片" class="max-w-full h-auto object-contain">
+						<img id="preview-image" src="" alt="Preview image" class="max-w-full h-auto object-contain">
 						<div id="loading-overlay" class="absolute inset-0 bg-black/50 flex items-center justify-center hidden">
 							<div class="animate-spin rounded-full h-12 w-12 border-b-2 border-primary"></div>
 						</div>
@@ -349,7 +349,7 @@
 
 				<button id="slice-button" class="w-full bg-primary hover:bg-primary/90 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed">
 					<i class="fa-solid fa-scissors mr-2"></i>
-					开始切割
+						Start splitting
 				</button>
 			</section>
 
@@ -357,8 +357,8 @@
 			<section id="results-section" class="lg:col-span-2 bg-white rounded-2xl shadow-xl p-6 opacity-0 transition-opacity duration-500">
 				<div class="text-center mb-6">
 					<i class="fa-solid fa-th text-5xl text-accent mb-4"></i>
-					<h2 class="text-xl font-bold text-neutral mb-2">切割结果</h2>
-					<p class="text-gray-500">点击下载按钮保存每一部分</p>
+					<h2 class="text-xl font-bold text-neutral mb-2">Result</h2>
+					<p class="text-gray-500">Click download on each piece to save</p>
 				</div>
 
 				<div id="grid-container" class="grid grid-cols-3 gap-4 mb-6">
@@ -367,7 +367,7 @@
 
 				<button id="download-all" class="w-full bg-secondary hover:bg-secondary/90 text-white font-semibold py-3 px-6 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 flex items-center justify-center">
 					<i class="fa-solid fa-download mr-2"></i>
-					下载全部图片
+						Download all
 				</button>
 			</section>
 		</main>
@@ -437,7 +437,7 @@
 	function handleFile(file) {
 		if (!file) return;
 		if (!file.type.match('image.*')) {
-			alert('请选择图片文件！');
+			alert('Please choose an image file');
 			return;
 		}
 
@@ -518,7 +518,7 @@
 				imgContainer.className = 'relative aspect-square overflow-hidden';
 				const img = document.createElement('img');
 				img.src = canvas.toDataURL('image/png');
-				img.alt = `图片部分 ${row * 3 + col + 1}`;
+				img.alt = `Image piece ${row * 3 + col + 1}`;
 				img.className = 'w-full h-full object-cover transition-transform duration-500 hover:scale-110';
 				imgContainer.appendChild(img);
 
@@ -531,9 +531,9 @@
 				// 添加下载按钮
 				const downloadBtn = document.createElement('button');
 				downloadBtn.className = 'w-full bg-accent hover:bg-accent/90 text-white font-medium py-2 px-4 transition-all duration-300 flex items-center justify-center';
-				downloadBtn.innerHTML = '<i class="fa-solid fa-download mr-2"></i> 下载';
+				downloadBtn.innerHTML = '<i class="fa-solid fa-download mr-2"></i> Download';
 				downloadBtn.addEventListener('click', function() {
-					downloadCanvas(canvas, `九宫格_${row * 3 + col + 1}.png`);
+					downloadCanvas(canvas, `grid_${row * 3 + col + 1}.png`);
 				});
 
 				// 组装结果项
@@ -559,7 +559,7 @@
 		// 逐个下载图片，设置小延迟避免浏览器阻止
 		canvasElements.forEach((canvas, index) => {
 			setTimeout(() => {
-				downloadCanvas(canvas, `九宫格_${index + 1}.png`);
+				downloadCanvas(canvas, `grid_${index + 1}.png`);
 			}, index * 200);
 		});
 	});

@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>屏幕颜色拾取工具-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>Screen Color Picker - Chandao Tools</title>
+	<meta name="keywords" content="online tool collection, Chandao Tools">
+	<meta name="description" content="Chandao Tools is a collection of free, no-login online utilities across life, dev, encoding/decoding, encryption, images, and fun.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -233,7 +233,15 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 	<!-- 添加图片处理所需的库 -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jimp/0.16.1/jimp.min.js"></script>
+	<!-- Google tag (gtag.js2) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-8NMLH22Y6G"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
 
+		gtag('config', 'G-8NMLH22Y6G');
+	</script>
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7274710287377352"
 			crossorigin="anonymous"></script>
 </head>
@@ -247,28 +255,28 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding</a>
+			<a href="../dev.html" class="nav-category">💻 Dev Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Fun Tools</a>
 		</div>
 	</div>
 </nav>
 
-<h1 style="text-align: center">屏幕颜色拾取</h1>
+<h1 style="text-align: center">Screen Color Picker</h1>
 <div class="container">
-	<button class="picker-button" id="startPicker">点击打开颜色拾取器</button>
+	<button class="picker-button" id="startPicker">Open color picker</button>
 
 	<div class="color-info">
 		<div class="color-row">
-			<div class="color-label">HEX 颜色值</div>
+			<div class="color-label">HEX</div>
 			<div class="color-value" id="hexValue">#364355</div>
 		</div>
 		<div class="color-row">
-			<div class="color-label">RGB 颜色值</div>
+			<div class="color-label">RGB</div>
 			<div class="color-value" id="rgbValue">54,67,85</div>
 		</div>
 	</div>
@@ -276,11 +284,11 @@
 	<div class="color-preview" id="colorPreview"></div>
 
 	<div class="info-box">
-		<div class="info-title">关于屏幕颜色拾取工具介绍:</div>
+		<div class="info-title">About this tool:</div>
 		<ul class="info-list">
-			<li>1. 点击"点击打开颜色拾取器"按钮，屏幕将会变成一个带有放大镜的小十字光标。</li>
-			<li>2. 运行时屏幕上显示颜色的区域，点击鼠标左键即可取得颜色。</li>
-			<li>3. 小提示: 如果拾取的颜色不在本网页内，可能小手鼠标再进行操作。</li>
+			<li>1. Click "Open color picker" to choose a color.</li>
+			<li>2. Pick a color and see it in HEX and RGB.</li>
+			<li>3. Tip: You can also pick colors outside the image if supported.</li>
 		</ul>
 	</div>
 </div>
