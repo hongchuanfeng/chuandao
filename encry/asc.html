@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>ASCII编码-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>ASCII Encoder - Chandao Tools</title>
+	<meta name="keywords" content="online tool collection, Chandao Tools">
+	<meta name="description" content="Chandao Tools is a collection of free, no-login online utilities across life, dev, encoding/decoding, encryption, images, and fun.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -261,43 +261,43 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding</a>
+			<a href="../dev.html" class="nav-category">💻 Dev Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Fun Tools</a>
 		</div>
 	</div>
 </nav>
 
-<h1 style="text-align: center">ASCII与字符串互转</h1>
+<h1 style="text-align: center">ASCII ⇄ String Converter</h1>
 <div class="container">
         <textarea
 				class="input-area"
 				id="inputText"
-				placeholder="请输入转为ASCII的字符串"></textarea>
+				placeholder="Enter text to convert to ASCII"></textarea>
 
 	<div class="button-group">
-		<button class="btn convert-to-ascii" id="toAsciiBtn">字符串转ASCII ↓</button>
-		<button class="btn convert-to-string" id="toStringBtn">ASCII转字符串 ↑</button>
-		<button class="btn clear-btn" id="clearBtn">清空</button>
+		<button class="btn convert-to-ascii" id="toAsciiBtn">Text → ASCII ↓</button>
+		<button class="btn convert-to-string" id="toStringBtn">ASCII → Text ↑</button>
+		<button class="btn clear-btn" id="clearBtn">Clear</button>
 	</div>
 
 	<textarea
 			class="output-area"
 			id="outputText"
-			placeholder="请输入需要解析的ASCII内容"
+			placeholder="Enter ASCII codes to parse"
 			readonly></textarea>
 
 	<div class="info-box">
-		<div class="info-title">关于ASCII编码介绍:</div>
+		<div class="info-title">About ASCII:</div>
 		<ul class="info-list">
-			<li>1. ASCII是一种用于电子通信的字符编码标准，可以在不同的计算机和通信设备之间进行数据交换。</li>
-			<li>2. ASCII编码使用7位或8位二进制来表示128或256个不同的字符。</li>
-			<li>3. 在7位ASCII码中，值从0到31和127是控制字符，它们通常不会直接显示在屏幕上，而是在计算机内部用于控制文本格式或通信协议。值从32到126是可打印字符，包括字母、数字和符号。</li>
-			<li>4. 当使用8位ASCII（也称为扩展ASCII）时，额外的128个字符（128-255）用于表示其他符号、外来字母和图形字符。</li>
+			<li>1. ASCII is a character encoding standard for electronic communication and data exchange.</li>
+			<li>2. ASCII uses 7 or 8 bits to represent 128 or 256 characters.</li>
+			<li>3. In 7-bit ASCII, values 0–31 and 127 are control characters; 32–126 are printable.</li>
+			<li>4. Extended ASCII (8-bit) adds 128 extra codes for symbols and international characters.</li>
 		</ul>
 	</div>
 </div>
@@ -309,22 +309,22 @@
 	const toStringBtn = document.getElementById('toStringBtn');
 	const clearBtn = document.getElementById('clearBtn');
 
-	// 字符串转ASCII
+	// Text → ASCII
 	toAsciiBtn.addEventListener('click', () => {
 		const input = inputText.value;
 		if (!input) {
-			alert('请输入要转换的字符串');
+			alert('Please enter text to convert');
 			return;
 		}
 		const ascii = input.split('').map(char => char.charCodeAt(0)).join(' ');
 		outputText.value = ascii;
 	});
 
-	// ASCII转字符串
+	// ASCII → Text
 	toStringBtn.addEventListener('click', () => {
 		const input = outputText.value;
 		if (!input) {
-			alert('请输入要转换的ASCII码');
+			alert('Please enter ASCII codes to convert');
 			return;
 		}
 		try {
@@ -333,7 +333,7 @@
 					.join('');
 			inputText.value = string;
 		} catch (error) {
-			alert('请输入有效的ASCII码（数字，用空格分隔）');
+			alert('Please enter valid ASCII codes (numbers separated by spaces)');
 		}
 	});
 

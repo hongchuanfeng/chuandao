@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>JWT解密-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>JWT Decode - Chdao Tools</title>
+	<meta name="keywords" content="online tools suite, Chdao Tools">
+	<meta name="description" content="Chdao Tools is an online toolkit with no login or fees. Includes life, developer, encoding/decoding, encryption, image, and entertainment tools.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -134,7 +134,7 @@
 			background-color: #f5f5f5;
 		}
 
-		/* 响应式导航栏 */
+		/* Responsive navigation */
 		nav {
 			background: white;
 			padding: 1rem 2rem;
@@ -179,7 +179,7 @@
 			padding: 0 1rem;
 		}
 
-		/* 工具卡片布局 */
+		/* Tools grid layout */
 		.tools-grid {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -211,7 +211,7 @@
 			padding-left: 1rem;
 		}
 
-		/* 移动端样式 */
+		/* Mobile styles */
 		@media (max-width: 768px) {
 			.nav-categories {
 				display: none;
@@ -268,60 +268,60 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding/Decoding</a>
+			<a href="../dev.html" class="nav-category">💻 Developer Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Entertainment</a>
 		</div>
 	</div>
 </nav>
 
-<h1 style="text-align: center">JWT加密解密</h1>
+<h1 style="text-align: center">JWT Decode</h1>
 <div class="container">
 	<div class="input-section">
 		<div class="input-header">
-			<span>输入令牌</span>
-			<span>结果显示</span>
+			<span>Input token</span>
+			<span>Output</span>
 		</div>
 		<textarea
 				class="input-area"
 				id="jwtInput"
-				placeholder="请输入JWT令牌..."></textarea>
+				placeholder="Enter JWT token..."></textarea>
 	</div>
 
 	<div class="button-group">
-		<button class="btn decode-btn" id="decodeBtn">开始解密</button>
-		<button class="btn clear-btn" id="clearBtn">清空</button>
+		<button class="btn decode-btn" id="decodeBtn">Decode</button>
+		<button class="btn clear-btn" id="clearBtn">Clear</button>
 	</div>
 
 	<div class="result-section">
-		<div class="result-header">解密结果：</div>
+		<div class="result-header">Decoded result:</div>
 		<div class="result-content" id="headerResult">
-			<strong>Header (头部):</strong>
+			<strong>Header:</strong>
 			<pre id="headerContent"></pre>
 		</div>
 		<br>
 		<div class="result-content" id="payloadResult">
-			<strong>Payload (负载):</strong>
+			<strong>Payload:</strong>
 			<pre id="payloadContent"></pre>
 		</div>
 		<br>
 		<div class="result-content" id="signatureResult">
-			<strong>Signature (签名):</strong>
+			<strong>Signature:</strong>
 			<pre id="signatureContent"></pre>
 		</div>
 	</div>
 
 	<div class="info-box">
-		<div class="info-title">关于JWT介绍:</div>
+		<div class="info-title">About JWT</div>
 		<ul class="info-list">
-			<li>1. JWT(JSON Web Tokens)是一种开放标准，定义了一种紧凑且自包含的方式，用于JSON对象的安全传输。</li>
-			<li>2. JWT由Header(头部)、Payload(负载)、Signature(签名)，三部分组成。</li>
-			<li>3. JWT一般用于信息验证，数据传输等场景。</li>
-			<li>4. JWT具有自包含、紧凑、隐私性等优点。</li>
+			<li>1) JWT (JSON Web Token) is an open standard for compact, self-contained JSON objects for secure transmission.</li>
+			<li>2) Composed of Header, Payload, and Signature.</li>
+			<li>3) Commonly used for authentication and information exchange.</li>
+			<li>4) Compact, self-contained, and privacy-friendly.</li>
 		</ul>
 	</div>
 </div>
@@ -351,14 +351,14 @@
 				signature: signature
 			};
 		} catch (error) {
-			throw new Error('JWT解析失败');
+			throw new Error('Failed to parse JWT');
 		}
 	}
 
 	decodeBtn.addEventListener('click', () => {
 		const jwt = jwtInput.value.trim();
 		if (!jwt) {
-			alert('请输入JWT令牌');
+			alert('Please enter a JWT token');
 			return;
 		}
 

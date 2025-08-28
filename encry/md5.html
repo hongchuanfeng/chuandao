@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>MD5加密-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>MD5 Hash - Chdao Tools</title>
+	<meta name="keywords" content="online tools suite, Chdao Tools">
+	<meta name="description" content="Chdao Tools is an online toolkit with no login or fees. Includes life, developer, encoding/decoding, encryption, image, and entertainment tools.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -119,7 +119,7 @@
 			background-color: #f5f5f5;
 		}
 
-		/* 响应式导航栏 */
+		/* Responsive navigation */
 		nav {
 			background: white;
 			padding: 1rem 2rem;
@@ -164,7 +164,7 @@
 			padding: 0 1rem;
 		}
 
-		/* 工具卡片布局 */
+		/* Tools grid layout */
 		.tools-grid {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -196,7 +196,7 @@
 			padding-left: 1rem;
 		}
 
-		/* 移动端样式 */
+		/* Mobile styles */
 		@media (max-width: 768px) {
 			.nav-categories {
 				display: none;
@@ -253,38 +253,38 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding/Decoding</a>
+			<a href="../dev.html" class="nav-category">💻 Developer Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Entertainment</a>
 		</div>
 	</div>
 </nav>
 
 <div class="container">
-	<h1>MD5加密</h1>
+	<h1>MD5 Hash</h1>
 
 	<div class="input-group">
-		<input type="text" id="inputText" placeholder="输入要加密的内容……">
+		<input type="text" id="inputText" placeholder="Enter text to hash...">
 		<div class="btn-group">
-			<button onclick="generateMD5(32, 'lower')">32位小写</button>
-			<button onclick="generateMD5(32, 'upper')">32位大写</button>
-			<button onclick="generateMD5(16, 'lower')">16位小写</button>
-			<button onclick="generateMD5(16, 'upper')">16位大写</button>
+			<button onclick="generateMD5(32, 'lower')">32-bit lower</button>
+			<button onclick="generateMD5(32, 'upper')">32-bit upper</button>
+			<button onclick="generateMD5(16, 'lower')">16-bit lower</button>
+			<button onclick="generateMD5(16, 'upper')">16-bit upper</button>
 		</div>
 		<div id="result"></div>
 	</div>
 
 	<div class="about-md5">
-		<h2>关于MD5介绍：</h2>
+		<h2>About MD5</h2>
 		<ul>
-			<li>MD5是一种广泛使用的散列函数，它可以将一个文件或一段文字，生成一个固定长度的散列值。</li>
-			<li>MD5无论输入的数据大小，都可以快速的进行计算。</li>
-			<li>由于MD5的算法相当简单，在各种语言中都可以简单的实现。</li>
-			<li>MD5一般用于密码的安全储存，以及一些文件的完整性校验。</li>
+			<li>MD5 is a widely used hash function producing a fixed-length digest of data.</li>
+			<li>Fast to compute regardless of input size.</li>
+			<li>Simple to implement across languages.</li>
+			<li>Commonly used for password storage and file integrity checks.</li>
 		</ul>
 	</div>
 </div>
@@ -304,7 +304,7 @@
 
 		const resultDiv = document.getElementById('result');
 		resultDiv.style.display = 'block';
-		resultDiv.innerHTML = `<strong>加密结果：</strong><br>${hash}`;
+		resultDiv.innerHTML = `<strong>Result:</strong><br>${hash}`;
 	}
 </script>
 <script>

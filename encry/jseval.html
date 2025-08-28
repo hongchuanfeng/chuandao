@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>js(eval)加密解密-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>JS (eval) Encode/Decode - Chdao Tools</title>
+	<meta name="keywords" content="online tools suite, Chdao Tools">
+	<meta name="description" content="Chdao Tools is an online toolkit with no login or fees. Includes life, developer, encoding/decoding, encryption, image, and entertainment tools.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -112,7 +112,7 @@
 			background-color: #f5f5f5;
 		}
 
-		/* 响应式导航栏 */
+		/* Responsive navigation */
 		nav {
 			background: white;
 			padding: 1rem 2rem;
@@ -157,7 +157,7 @@
 			padding: 0 1rem;
 		}
 
-		/* 工具卡片布局 */
+		/* Tools grid layout */
 		.tools-grid {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -189,7 +189,7 @@
 			padding-left: 1rem;
 		}
 
-		/* 移动端样式 */
+		/* Mobile styles */
 		@media (max-width: 768px) {
 			.nav-categories {
 				display: none;
@@ -245,77 +245,77 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding/Decoding</a>
+			<a href="../dev.html" class="nav-category">💻 Developer Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Entertainment</a>
 		</div>
 	</div>
 </nav>
 
-<h1 style="text-align: center">js(eval)加密/解密</h1>
+<h1 style="text-align: center">JS (eval) Encode/Decode</h1>
 <div class="container">
 
 
-	<textarea id="inputCode" placeholder="输入JavaScript代码...">
+	<textarea id="inputCode" placeholder="Enter JavaScript code...">
 function xc_tool() {
     console.log("Hello World");
 }</textarea>
 
 	<div class="button-group">
-		<button class="encode-btn" onclick="encode()">开始编码↓</button>
-		<button class="decode-btn" onclick="decode()">开始解码↑</button>
-		<button class="clear-btn" onclick="clearAll()">清空</button>
+		<button class="encode-btn" onclick="encode()">Encode ↓</button>
+		<button class="decode-btn" onclick="decode()">Decode ↑</button>
+		<button class="clear-btn" onclick="clearAll()">Clear</button>
 	</div>
 
-	<textarea id="outputResult" placeholder="处理结果展示区..."></textarea>
+	<textarea id="outputResult" placeholder="Output..."></textarea>
 
 	<div class="instruction">
-		<h3>关于JS代码混淆工具介绍：</h3>
-		<p>1、在JavaScript中，eval函数可以执行任何字符串形式的JavaScript代码。</p>
-		<p>2、本工具就是利用eval函数进行的JS代码加密以及解密。</p>
-		<p>3、注意：JavaScript中的eval函数是非常危险的，可能会造成数据注入或XSS攻击。</p>
-		<p>4、提示：解码后的JS代码可通过"js压缩/格式化"工具进行美化！</p>
+		<h3>About this JS obfuscation tool</h3>
+		<p>1) In JavaScript, eval can execute any string as code.</p>
+		<p>2) This tool encodes/decodes JS by wrapping with eval.</p>
+		<p>3) Warning: eval is dangerous and can lead to injection or XSS.</p>
+		<p>4) Tip: Use the JS format/minify tool to beautify decoded code.</p>
 	</div>
 
 	<script>
 		function encode() {
 			const input = document.getElementById('inputCode').value;
 			if (!input) {
-				alert('请输入要加密的代码');
+				alert('Please enter code to encode');
 				return;
 			}
 
 			try {
-				// 编码逻辑：转义+包装eval
+				// Encode: escape + wrap in eval
 				const encoded = `eval(unescape("${escape(input)}"))`;
 				document.getElementById('outputResult').value = encoded;
 			} catch (e) {
-				alert('加密失败：' + e.message);
+				alert('Encode failed: ' + e.message);
 			}
 		}
 
 		function decode() {
 			const input = document.getElementById('inputCode').value;
 			if (!input) {
-				alert('请输入要解密的内容');
+				alert('Please enter content to decode');
 				return;
 			}
 
 			try {
-				// 提取加密内容的正则匹配
+				// Extract encoded content via regex
 				const matches = input.match(/eval$unescape\("([\s\S]*?)"$\)/);
 				if (matches && matches[1]) {
 					const decoded = unescape(matches[1]);
 					document.getElementById('outputResult').value = decoded;
 				} else {
-					alert('无法识别有效的加密格式');
+					alert('Unrecognized encoded format');
 				}
 			} catch (e) {
-				alert('解密失败：' + e.message);
+				alert('Decode failed: ' + e.message);
 			}
 		}
 

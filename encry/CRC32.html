@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>CRC32在线加密工具-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>CRC32 Online Tool - Chandao Tools</title>
+	<meta name="keywords" content="online tool collection, Chandao Tools">
+	<meta name="description" content="Chandao Tools is a collection of free, no-login online utilities across life, dev, encoding/decoding, encryption, images, and fun.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -246,41 +246,41 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding</a>
+			<a href="../dev.html" class="nav-category">💻 Dev Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Fun Tools</a>
 		</div>
 	</div>
 </nav>
-<h1 style="text-align: center">CRC32在线加密工具</h1>
+<h1 style="text-align: center">CRC32 Online Tool</h1>
 <div class="container">
 
-	<textarea id="inputContent" placeholder="输入要加密的内容..."></textarea>
+	<textarea id="inputContent" placeholder="Enter content to hash..."></textarea>
 
 	<div class="button-group">
-		<button class="encrypt-btn" onclick="calculateCRC32()">开始加密</button>
-		<button class="clear-btn" onclick="clearAll()">清空</button>
+		<button class="encrypt-btn" onclick="calculateCRC32()">Calculate</button>
+		<button class="clear-btn" onclick="clearAll()">Clear</button>
 	</div>
 
 	<div id="result"></div>
 
 	<div class="instruction">
-		<h3>关于CRC32工具介绍：</h3>
-		<p>1、CRC32（循环冗余校验码）是一种广泛使用的错误检测校验和算法。</p>
-		<p>2、CRC32算法基于多项式除法，通过将数据看作是一个二进制数，然后进行模2除法来生成一个32位的校验和。</p>
-		<p>3、CRC32算法主要用于检测传输或存储过程中的错误，而不是用于加密或数据完整性验证。</p>
-		<p>4、CRC32适用于文件传输，磁盘存储，网络通信等场景。</p>
+		<h3>About CRC32:</h3>
+		<p>1. CRC32 (Cyclic Redundancy Check) is a widely used checksum algorithm for error detection.</p>
+		<p>2. It is based on polynomial division over GF(2) and produces a 32-bit checksum.</p>
+		<p>3. CRC32 is for error detection, not encryption or cryptographic integrity.</p>
+		<p>4. Commonly used in file transfer, disk storage, and network communication.</p>
 	</div>
 
 	<script>
 		function calculateCRC32() {
 			const input = document.getElementById('inputContent').value;
 			if (!input) {
-				alert('请输入要加密的内容');
+				alert('Please enter content to hash');
 				return;
 			}
 
@@ -290,7 +290,7 @@
 			const hexResult = (crcValue >>> 0).toString(16).padStart(8, '0');
 
 			document.getElementById('result').innerHTML =
-					`CRC32校验和：<span style="color:#2196F3">${hexResult.toUpperCase()}</span>`;
+					`CRC32 checksum: <span style="color:#2196F3">${hexResult.toUpperCase()}</span>`;
 		}
 
 		function clearAll() {

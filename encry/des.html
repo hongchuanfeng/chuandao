@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>DES加密解密工具-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>DES Encrypt/Decrypt Tool - Chandao Tools</title>
+	<meta name="keywords" content="online tool collection, Chandao Tools">
+	<meta name="description" content="Chandao Tools is a collection of free, no-login online utilities across life, dev, encoding/decoding, encryption, images, and fun.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -268,44 +268,44 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding</a>
+			<a href="../dev.html" class="nav-category">💻 Dev Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Fun Tools</a>
 		</div>
 	</div>
 </nav>
 
-<h1 style="text-align: center">DES加密解密</h1>
+<h1 style="text-align: center">DES Encrypt / Decrypt</h1>
 <div class="container">
         <textarea
 				class="input-area"
 				id="inputText"
-				placeholder="输入要加密的内容..."></textarea>
+				placeholder="Enter content to encrypt..."></textarea>
 
 	<div class="button-group">
-		<button class="btn key-btn" id="generateKeyBtn">🔑 生成密钥</button>
-		<button class="btn encrypt-btn" id="encryptBtn">加密 ↓</button>
-		<button class="btn decrypt-btn" id="decryptBtn">解密 ↑</button>
-		<button class="btn clear-btn" id="clearBtn">清空</button>
+		<button class="btn key-btn" id="generateKeyBtn">🔑 Generate Key</button>
+		<button class="btn encrypt-btn" id="encryptBtn">Encrypt ↓</button>
+		<button class="btn decrypt-btn" id="decryptBtn">Decrypt ↑</button>
+		<button class="btn clear-btn" id="clearBtn">Clear</button>
 	</div>
 
 	<textarea
 			class="output-area"
 			id="outputText"
-			placeholder="输入要解密的内容..."
+			placeholder="Enter content to decrypt..."
 	></textarea>
 
 	<div class="info-box">
-		<div class="info-title">关于DES工具介绍:</div>
+		<div class="info-title">About DES:</div>
 		<ul class="info-list">
-			<li>1. DES（Data Encryption Standard）是一种对称密钥加密算法，由IBM公司研发。</li>
-			<li>2. DES是一种分组密码，它将明文数据分成64位的块，并使用56位的密钥对这些块进行加密。</li>
-			<li>3. DES的密钥长度为56位，但实际上每8位中有一个奇偶校验位，所以有效密钥长度为56位。</li>
-			<li>4. DES算法存在着有密钥长度过短，加密模式较少以及子密钥生成算法可能导致弱密钥问题的安全问题。</li>
+			<li>1. DES (Data Encryption Standard) is a symmetric-key algorithm developed by IBM.</li>
+			<li>2. It encrypts 64-bit blocks using a 56-bit effective key.</li>
+			<li>3. One parity bit per byte makes 64 bits total, with 56 bits effective.</li>
+			<li>4. DES is considered weak today due to short key length and other issues.</li>
 		</ul>
 	</div>
 </div>
@@ -321,40 +321,40 @@
 
 	let secretKey = '';
 
-	// 生成随机密钥
+	// Generate random key
 	generateKeyBtn.addEventListener('click', () => {
 		secretKey = CryptoJS.lib.WordArray.random(7).toString();
-		alert(`生成的密钥为：${secretKey}\n请妥善保管此密钥，解密时需要使用相同的密钥。`);
+		alert(`Generated key: ${secretKey}\nKeep it safe. You'll need it to decrypt.`);
 	});
 
-	// 加密功能
+	// Encrypt
 	encryptBtn.addEventListener('click', () => {
 		if (!secretKey) {
-			alert('请先生成密钥');
+			alert('Please generate a key first');
 			return;
 		}
 		const text = inputText.value.trim();
 		if (!text) {
-			alert('请输入要加密的内容');
+			alert('Please enter content to encrypt');
 			return;
 		}
 		try {
 			const encrypted = CryptoJS.DES.encrypt(text, secretKey).toString();
 			outputText.value = encrypted;
 		} catch (error) {
-			alert('加密失败，请检查输入内容');
+			alert('Encryption failed. Please check input');
 		}
 	});
 
-	// 解密功能
+	// Decrypt
 	decryptBtn.addEventListener('click', () => {
 		if (!secretKey) {
-			alert('请先生成密钥');
+			alert('Please generate a key first');
 			return;
 		}
 		const text = outputText.value.trim();
 		if (!text) {
-			alert('请输入要解密的内容');
+			alert('Please enter content to decrypt');
 			return;
 		}
 		try {
@@ -362,11 +362,11 @@
 			const originalText = decrypted.toString(CryptoJS.enc.Utf8);
 			inputText.value = originalText;
 		} catch (error) {
-			alert('解密失败，请检查密文和密钥是否正确');
+			alert('Decryption failed. Check ciphertext and key');
 		}
 	});
 
-	// 清空功能
+	// Clear
 	clearBtn.addEventListener('click', () => {
 		inputText.value = '';
 		outputText.value = '';

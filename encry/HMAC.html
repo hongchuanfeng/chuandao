@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>HMAC哈希加密-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>HMAC Hash - Chdao Tools</title>
+	<meta name="keywords" content="online tools suite, Chdao Tools">
+	<meta name="description" content="Chdao Tools is an online toolkit with no login or fees. Includes life, developer, encoding/decoding, encryption, image, and entertainment tools.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -109,7 +109,7 @@
 			background-color: #f5f5f5;
 		}
 
-		/* 响应式导航栏 */
+		/* Responsive navigation */
 		nav {
 			background: white;
 			padding: 1rem 2rem;
@@ -154,7 +154,7 @@
 			padding: 0 1rem;
 		}
 
-		/* 工具卡片布局 */
+		/* Tools grid layout */
 		.tools-grid {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -186,7 +186,7 @@
 			padding-left: 1rem;
 		}
 
-		/* 移动端样式 */
+		/* Mobile styles */
 		@media (max-width: 768px) {
 			.nav-categories {
 				display: none;
@@ -243,22 +243,22 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding/Decoding</a>
+			<a href="../dev.html" class="nav-category">💻 Developer Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Entertainment</a>
 		</div>
 	</div>
 </nav>
 
-<h1 style="text-align: center">HMAC哈希加密</h1>
+<h1 style="text-align: center">HMAC Hash</h1>
 <div class="container">
 
 
-	<textarea id="inputContent" placeholder="输入要加密的内容..."></textarea>
+	<textarea id="inputContent" placeholder="Enter text..."></textarea>
 
 	<div class="button-group">
 		<button class="hmac-md5" onclick="generateHMAC('MD5')">HmacMd5</button>
@@ -268,30 +268,30 @@
 		<button class="hmac-sha384" onclick="generateHMAC('SHA384')">HmacSha384</button>
 		<button class="hmac-sha512" onclick="generateHMAC('SHA512')">HmacSha512</button>
 		<button class="hmac-ripemd160" onclick="generateHMAC('RIPEMD160')">HmacRipemd160</button>
-		<button class="clear-btn" onclick="clearAll()">清空</button>
+		<button class="clear-btn" onclick="clearAll()">Clear</button>
 	</div>
 
-	<textarea id="outputResult" placeholder="加密结果输出..." readonly></textarea>
+	<textarea id="outputResult" placeholder="Output..." readonly></textarea>
 
 	<div class="instruction">
-		<h3>关于HMAC工具介绍：</h3>
-		<p>1、HMAC（Hash-based Message Authentication Code）是一种基于哈希函数的消息认证码。</p>
-		<p>2、HMAC的设计基于哈希函数，它使用一个密钥和一个哈希函数来生成固定长度的摘要，用于验证消息的完整性和来源。</p>
-		<p>3、HMAC的安全性依赖于哈希函数的安全性和密钥的保密性，被认为是高度安全的认证机制。</p>
-		<p>4、HMAC适用于数据完整性校验、身份验证等安全场景。</p>
+		<h3>About HMAC</h3>
+		<p>1) HMAC (Hash-based Message Authentication Code) is a MAC based on a hash function.</p>
+		<p>2) Uses a secret key and a hash function to produce a fixed-length digest to verify integrity and origin.</p>
+		<p>3) Security depends on the hash function and key secrecy; considered highly secure.</p>
+		<p>4) Used for integrity checks and authentication.</p>
 	</div>
 
 	<script>
 		function generateHMAC(algorithm) {
 			const content = document.getElementById('inputContent').value;
 			if (!content) {
-				alert('请输入要加密的内容');
+				alert('Please enter text');
 				return;
 			}
 
-			const key = prompt('请输入加密密钥：');
+			const key = prompt('Enter secret key:');
 			if (!key) {
-				alert('必须输入密钥');
+				alert('A secret key is required');
 				return;
 			}
 
@@ -302,7 +302,7 @@
 
 				document.getElementById('outputResult').value = hmac.toString(CryptoJS.enc.Hex);
 			} catch (e) {
-				alert('加密失败：' + e.message);
+				alert('Failed: ' + e.message);
 			}
 		}
 

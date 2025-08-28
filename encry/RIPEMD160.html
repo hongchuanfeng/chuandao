@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>RIPEMD160哈希加密-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>RIPEMD160 Hash - Chdao Tools</title>
+	<meta name="keywords" content="online tools suite, Chdao Tools">
+	<meta name="description" content="Chdao Tools is an online toolkit with no login or fees. Includes life, developer, encoding/decoding, encryption, image, and entertainment tools.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -115,7 +115,7 @@
 			background-color: #f5f5f5;
 		}
 
-		/* 响应式导航栏 */
+		/* Responsive navigation */
 		nav {
 			background: white;
 			padding: 1rem 2rem;
@@ -160,7 +160,7 @@
 			padding: 0 1rem;
 		}
 
-		/* 工具卡片布局 */
+		/* Tools grid layout */
 		.tools-grid {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -192,7 +192,7 @@
 			padding-left: 1rem;
 		}
 
-		/* 移动端样式 */
+		/* Mobile styles */
 		@media (max-width: 768px) {
 			.nav-categories {
 				display: none;
@@ -250,44 +250,44 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding/Decoding</a>
+			<a href="../dev.html" class="nav-category">💻 Developer Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Entertainment</a>
 		</div>
 	</div>
 </nav>
-<h1 style="text-align: center">RIPEMD160哈希加密</h1>
+<h1 style="text-align: center">RIPEMD160 Hash</h1>
 <div class="container">
 
 
-	<textarea id="inputContent" placeholder="输入要加密的内容..."></textarea>
+	<textarea id="inputContent" placeholder="Enter text..."></textarea>
 
 	<div class="button-group">
-		<button class="encrypt-upper" onclick="generateHash('upper')">加密(大写)</button>
-		<button class="encrypt-lower" onclick="generateHash('lower')">加密(小写)</button>
-		<button class="clear-btn" onclick="clearAll()">清空</button>
+		<button class="encrypt-upper" onclick="generateHash('upper')">Uppercase</button>
+		<button class="encrypt-lower" onclick="generateHash('lower')">Lowercase</button>
+		<button class="clear-btn" onclick="clearAll()">Clear</button>
 	</div>
 
-	<textarea id="outputResult" placeholder="加密结果输出..." readonly></textarea>
+	<textarea id="outputResult" placeholder="Output..." readonly></textarea>
 
 	<div class="instruction">
-		<h3>关于RIPEMD160工具介绍：</h3>
-		<p>1. RIPEMD-160是一种哈希函数，是RIPEMD算法的一个变体，提供了更高的安全性和更快的性能。</p>
-		<p>2. RIPEMD-160的工作原理类似于其他哈希函数，如SHA-1和SHA-256。</p>
-		<p>3. RIPEMD-160接受任意长度的输入，并产生一个固定长度的哈希值。RIPEMD-160的哈希值长度为160位。</p>
-		<p>4. RIPEMD-160是非常安全的哈希函数，提供了良好的抗碰撞和抗差分密码分析的能力。</p>
-		<p>5. RIPEMD-160适用于数据完整性校验，数字签名以及信息交换等场景。</p>
+		<h3>About RIPEMD160</h3>
+		<p>1) RIPEMD-160 is a hash function, a variant of RIPEMD, offering improved security and performance.</p>
+		<p>2) Similar in principle to SHA-1 and SHA-256.</p>
+		<p>3) Accepts arbitrary-length input and outputs a 160-bit hash.</p>
+		<p>4) Provides good collision and differential resistance.</p>
+		<p>5) Used for integrity checks, digital signatures, and data exchange.</p>
 	</div>
 
 	<script>
 		function generateHash(caseType) {
 			const content = document.getElementById('inputContent').value;
 			if (!content) {
-				alert('请输入要加密的内容');
+				alert('Please enter text');
 				return;
 			}
 
@@ -296,7 +296,7 @@
 				const result = caseType === 'upper' ? hash.toUpperCase() : hash.toLowerCase();
 				document.getElementById('outputResult').value = result;
 			} catch (e) {
-				alert('加密失败：' + e.message);
+				alert('Hash failed: ' + e.message);
 			}
 		}
 

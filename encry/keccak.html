@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Keccak加密-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>Keccak Hash - Chdao Tools</title>
+	<meta name="keywords" content="online tools suite, Chdao Tools">
+	<meta name="description" content="Chdao Tools is an online toolkit with no login or fees. Includes life, developer, encoding/decoding, encryption, image, and entertainment tools.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -118,7 +118,7 @@
 			background-color: #f5f5f5;
 		}
 
-		/* 响应式导航栏 */
+		/* Responsive navigation */
 		nav {
 			background: white;
 			padding: 1rem 2rem;
@@ -163,7 +163,7 @@
 			padding: 0 1rem;
 		}
 
-		/* 工具卡片布局 */
+		/* Tools grid layout */
 		.tools-grid {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -195,7 +195,7 @@
 			padding-left: 1rem;
 		}
 
-		/* 移动端样式 */
+		/* Mobile styles */
 		@media (max-width: 768px) {
 			.nav-categories {
 				display: none;
@@ -252,46 +252,46 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding/Decoding</a>
+			<a href="../dev.html" class="nav-category">💻 Developer Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Entertainment</a>
 		</div>
 	</div>
 </nav>
-<h1 style="text-align: center">Keccak加密</h1>
+<h1 style="text-align: center">Keccak Hash</h1>
 <div class="container">
 
 
-	<textarea id="input" placeholder="加密的内容..."></textarea>
+	<textarea id="input" placeholder="Enter text..."></textarea>
 
 	<div class="button-group">
-		<button class="encrypt-btn" onclick="encrypt(224)">keccak-224加密</button>
-		<button class="encrypt-btn" onclick="encrypt(256)">keccak-256加密</button>
-		<button class="encrypt-btn" onclick="encrypt(384)">keccak-384加密</button>
-		<button class="encrypt-btn" onclick="encrypt(512)">keccak-512加密</button>
-		<button class="clear-btn" onclick="clearAll()">清空</button>
+		<button class="encrypt-btn" onclick="encrypt(224)">keccak-224</button>
+		<button class="encrypt-btn" onclick="encrypt(256)">keccak-256</button>
+		<button class="encrypt-btn" onclick="encrypt(384)">keccak-384</button>
+		<button class="encrypt-btn" onclick="encrypt(512)">keccak-512</button>
+		<button class="clear-btn" onclick="clearAll()">Clear</button>
 	</div>
 
-	<div id="result">处理结果展示区...</div>
+	<div id="result">Output...</div>
 
 	<div class="introduction">
-		<h3>关于Keccak加密介绍：</h3>
-		<p>① Keccak是一种加密哈希函数，由Guido Bertoni，Joan Daemen等人共同设计。</p>
-		<p>② Keccak允许用户自定义哈希值的长度、容量和速率，使它可以适应多种不同的应用场景。</p>
-		<p>③ Keccak在多平台上都表现出良好的性能，特别是在硬件实现上。</p>
-		<p>④ Keccak可以轻松扩展或压缩输出长度，而不会影响其安全性。</p>
-		<p>⑤ Keccak适用于数据完整性校验、密码存储、数字签名方案、随机数量生成、加密协议。</p>
+		<h3>About Keccak</h3>
+		<p>1) Keccak is a cryptographic hash function designed by Guido Bertoni, Joan Daemen, et al.</p>
+		<p>2) Supports custom output length, capacity, and rate for diverse scenarios.</p>
+		<p>3) Performs well across platforms, especially in hardware.</p>
+		<p>4) Output length can be extended/compressed without affecting security.</p>
+		<p>5) Used for integrity checks, password storage, signatures, RNG, and protocols.</p>
 	</div>
 
 	<script>
 		function encrypt(bits) {
 			const input = document.getElementById('input').value;
 			if (!input) {
-				alert('请输入要加密的内容');
+				alert('Please enter text');
 				return;
 			}
 
@@ -310,16 +310,16 @@
 					hash = sha3_512(input);
 					break;
 				default:
-					hash = '不支持的加密位数';
+					hash = 'Unsupported bit length';
 			}
 
 			document.getElementById('result').innerHTML =
-					`keccak-${bits}加密结果：<br><strong>${hash}</strong>`;
+					`keccak-${bits} result:<br><strong>${hash}</strong>`;
 		}
 
 		function clearAll() {
 			document.getElementById('input').value = '';
-			document.getElementById('result').innerHTML = '处理结果展示区...';
+			document.getElementById('result').innerHTML = 'Output...';
 		}
 	</script>
 </div>
