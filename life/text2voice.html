@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>文字转语音工具-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>Text to Speech - Chdao Tools</title>
+	<meta name="keywords" content="online tools suite, Chdao Tools">
+	<meta name="description" content="Chdao Tools is an online toolkit with no login or fees. Includes life, developer, encoding/decoding, encryption, image, and entertainment tools.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -118,7 +118,7 @@
 			background-color: #f5f5f5;
 		}
 
-		/* 响应式导航栏 */
+		/* Responsive navigation */
 		nav {
 			background: white;
 			padding: 1rem 2rem;
@@ -163,7 +163,7 @@
 			padding: 0 1rem;
 		}
 
-		/* 工具卡片布局 */
+		/* Tools grid layout */
 		.tools-grid {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -195,7 +195,7 @@
 			padding-left: 1rem;
 		}
 
-		/* 移动端样式 */
+		/* Mobile styles */
 		@media (max-width: 768px) {
 			.nav-categories {
 				display: none;
@@ -251,13 +251,13 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding/Decoding</a>
+			<a href="../dev.html" class="nav-category">💻 Developer Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Entertainment</a>
 		</div>
 	</div>
 </nav>
@@ -265,22 +265,22 @@
 
 <div class="container">
 	<div class="header">
-		<h3>文字转语音工具</h3>
-		<button class="con-btn" id="downloadButton" disabled>下载音频</button>
+		<h3>Text to Speech</h3>
+		<button class="con-btn" id="downloadButton" disabled>Download audio</button>
 	</div>
 	<div class="options">
 		<div>
-			<label><input type="radio" name="language" value="zh-CN" checked>中文（中国）</label>
-			<label><input type="radio" name="language" value="en-US">英语（美国）</label>
+			<label><input type="radio" name="language" value="zh-CN" checked>Chinese (China)</label>
+			<label><input type="radio" name="language" value="en-US">English (US)</label>
 		</div>
 		<div>
-			<label><input type="checkbox" id="autoplayCheckbox" checked>自动播放音频</label>
+			<label><input type="checkbox" id="autoplayCheckbox" checked>Auto play audio</label>
 		</div>
 	</div>
-	<textarea id="text" placeholder="请输入文字"></textarea>
+	<textarea id="text" placeholder="Enter text"></textarea>
 	<div class="buttons">
-		<button class="con-btn" onclick="play()">播放</button>
-		<button class="con-btn" onclick="stop()">停止</button>
+		<button class="con-btn" onclick="play()">Play</button>
+		<button class="con-btn" onclick="stop()">Stop</button>
 	</div>
 </div>
 
@@ -297,12 +297,12 @@
 			return;
 		}
 		const lang = getCheckedLanguage();
-		// 创建 SpeechSynthesisUtterance 对象
+		// Create SpeechSynthesisUtterance
 		utterance = new SpeechSynthesisUtterance(text);
 		utterance.lang = lang;
-		// 播放语音
+		// Play speech
 		window.speechSynthesis.speak(utterance);
-		// 自动播放时，激活“下载音频”按钮
+		// On autoplay, enable the Download button
 		if (autoplayCheckbox.checked) {
 			downloadButton.disabled = false;
 		}
@@ -312,7 +312,7 @@
 		if (utterance) {
 			window.speechSynthesis.cancel(utterance);
 		}
-		// 停止播放时，禁用“下载音频”按钮
+		// When stopped, disable the Download button
 		downloadButton.disabled = true;
 	}
 
@@ -322,7 +322,7 @@
 				return radio.value;
 			}
 		}
-		// 默认返回中文
+		// Default to Chinese
 		return 'zh-CN';
 	}
 
@@ -330,17 +330,17 @@
 		if (!utterance) {
 			return;
 		}
-		// 将语音转换为 Blob 对象，并创建 URL
+		// Convert speech to Blob and create URL
 		const blob = new Blob([new Uint8Array(utterance.audioBuffer)], {
 			type: 'audio/mp3'
 		});
 		const url = URL.createObjectURL(blob);
-		// 创建并模拟点击链接
+		// Create link and simulate click
 		const link = document.createElement('a');
 		link.download = 'speech.mp3';
 		link.href = url;
 		link.click();
-		// 释放 URL 对象
+		// Revoke URL
 		URL.revokeObjectURL(url);
 	}
 

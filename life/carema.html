@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>摄像头测试-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>Camera Test - Chdao Tools</title>
+	<meta name="keywords" content="online tools suite, Chdao Tools">
+	<meta name="description" content="Chdao Tools is an online toolkit with no login or fees. Includes life, developer, encoding/decoding, encryption, image, and entertainment tools.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -96,7 +96,7 @@
 			background-color: #f5f5f5;
 		}
 
-		/* 响应式导航栏 */
+		/* Responsive navigation */
 		nav {
 			background: white;
 			padding: 1rem 2rem;
@@ -141,7 +141,7 @@
 			padding: 0 1rem;
 		}
 
-		/* 工具卡片布局 */
+		/* Tools grid layout */
 		.tools-grid {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -173,7 +173,7 @@
 			padding-left: 1rem;
 		}
 
-		/* 移动端样式 */
+		/* Mobile styles */
 		@media (max-width: 768px) {
 			.nav-categories {
 				display: none;
@@ -229,41 +229,41 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding/Decoding</a>
+			<a href="../dev.html" class="nav-category">💻 Developer Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Entertainment</a>
 		</div>
 	</div>
 </nav>
 
 
 <div class="container">
-	<h1>摄像头测试</h1>
+	<h1>Camera Test</h1>
 
 	<button id="cameraBtn">
 		<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
 			<path d="M12 2c-2.65 0-5 1.35-6 3.4L4 6H2v12h2l2 2h12l2-2h2V6h-2l-2-2.6C17 3.35 14.65 2 12 2zm0 2c1.5 0 2.85.75 3.6 2H8.4C9.15 4.75 10.5 4 12 4zm6 4v10H6V8h12zM12 10c-2.2 0-4 1.8-4 4s1.8 4 4 4 4-1.8 4-4-1.8-4-4-4z"/>
 		</svg>
-		点击测试摄像头
+		Click to test camera
 	</button>
 
 	<div class="instructions">
-		<h3>摄像头测试说明：</h3>
+		<h3>Camera test instructions:</h3>
 		<ol style="margin-left: 10px;">
-			<li>点击测试后，浏览器将请求摄像头访问权限</li>
-			<li>如果拒绝使用摄像头，将显示测试图像</li>
-			<li>测试全程在本地进行，不会保存任何数据到服务器</li>
-			<li>支持使用浏览器开发者工具进行调试</li>
+			<li>After clicking test, the browser will request camera permission</li>
+			<li>If denied, a test image will be shown</li>
+			<li>Runs locally; no data is saved to a server</li>
+			<li>Supports debugging via browser dev tools</li>
 		</ol>
 	</div>
 
 	<video id="videoPreview" autoplay playsinline></video>
 	<img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2ZmZiIvPjxjaXJjbGUgY3g9IjUwIiBjeT0iNTAiIHI9IjQwIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMiIgZmlsbD0ibm9uZSIvPjxsaW5lIHgxPSIzMCIgeTE9IjUwIiB4Mj0iNzAiIHkyPSI1MCIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjIiLz48L3N2Zz4="
-		 class="test-image" alt="测试图像">
+		 class="test-image" alt="Test image">
 </div>
 
 <script>
@@ -271,7 +271,7 @@
 	const video = document.getElementById('videoPreview');
 	const testImage = document.querySelector('.test-image');
 
-	// 摄像头测试功能
+	// Camera test functionality
 	async function testCamera() {
 		try {
 			const stream = await navigator.mediaDevices.getUserMedia({
@@ -282,18 +282,18 @@
 			testImage.style.display = 'none';
 			video.srcObject = stream;
 
-			cameraBtn.textContent = '摄像头已启用';
+			cameraBtn.textContent = 'Camera enabled';
 			cameraBtn.disabled = true;
 
 		} catch (error) {
-			console.error('摄像头访问失败:', error);
+			console.error('Camera access failed:', error);
 			video.style.display = 'none';
 			testImage.style.display = 'block';
-			alert('摄像头访问被拒绝，已显示测试图像');
+			alert('Camera access denied. Showing test image');
 		}
 	}
 
-	// 按钮点击事件
+	// Button click event
 	cameraBtn.addEventListener('click', () => {
 		if (video.srcObject) {
 			stopCamera();
@@ -307,7 +307,7 @@
             testCamera();
         });
 
-        // 停止摄像头
+        // Stop camera
         function stopCamera() {
             if (video.srcObject) {
                 video.srcObject.getTracks().forEach(track => track.stop());
@@ -317,7 +317,7 @@
             cameraBtn.disabled = false;
         }
 
-        // 页面离开时停止摄像头
+        // Stop camera when page leaves
         window.addEventListener('beforeunload', stopCamera);
 </script>
 <script>
@@ -325,7 +325,7 @@
 		const nav = document.querySelector('.nav-categories');
 		nav.classList.toggle('active');
 
-		// 点击菜单项后自动关闭
+		// Auto-close after clicking menu items on mobile
 		document.querySelectorAll('.nav-category').forEach(item => {
 			item.addEventListener('click', () => {
 				if (window.innerWidth <= 768) {

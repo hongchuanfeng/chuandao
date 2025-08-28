@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>吸烟成本计算器-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>Smoking Cost Calculator - Chdao Tools</title>
+	<meta name="keywords" content="online tools suite, Chdao Tools">
+	<meta name="description" content="Chdao Tools is an online toolkit with no login or fees. Includes life, developer, encoding/decoding, encryption, image, and entertainment tools.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -150,7 +150,7 @@
 			background-color: #f5f5f5;
 		}
 
-		/* 响应式导航栏 */
+		/* Responsive navigation */
 		nav {
 			background: white;
 			padding: 1rem 2rem;
@@ -196,7 +196,7 @@
 			padding: 0 1rem;
 		}
 
-		/* 工具卡片布局 */
+		/* Tools grid layout */
 		.tools-grid {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -228,7 +228,7 @@
 			padding-left: 1rem;
 		}
 
-		/* 移动端样式 */
+		/* Mobile styles */
 		@media (max-width: 768px) {
 			.nav-categories {
 				display: none;
@@ -284,22 +284,22 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding/Decoding</a>
+			<a href="../dev.html" class="nav-category">💻 Developer Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Entertainment</a>
 		</div>
 	</div>
 </nav>
 
 
-<h1 style="text-align: center">吸烟成本计算器</h1>
+<h1 style="text-align: center">Smoking Cost Calculator</h1>
 <div class="calculator">
 	<div class="input-group">
-		<div class="input-label">每天吸烟数数(根)</div>
+		<div class="input-label">Cigarettes per day</div>
 		<input type="number" class="input-field" id="cigarettesPerDay" value="">
 		<div class="spinner">
 			<button onclick="adjustValue('cigarettesPerDay', 1)">▲</button>
@@ -308,7 +308,7 @@
 	</div>
 
 	<div class="input-group">
-		<div class="input-label">每包香烟数量(根)</div>
+		<div class="input-label">Cigarettes per pack</div>
 		<input type="number" class="input-field" id="cigarettesPerPack" value="">
 		<div class="spinner">
 			<button onclick="adjustValue('cigarettesPerPack', 1)">▲</button>
@@ -317,7 +317,7 @@
 	</div>
 
 	<div class="input-group">
-		<div class="input-label">每包香烟价格(元)</div>
+		<div class="input-label">Price per pack</div>
 		<input type="number" class="input-field" id="pricePerPack" value="">
 		<div class="spinner">
 			<button onclick="adjustValue('pricePerPack', 1)">▲</button>
@@ -325,7 +325,7 @@
 		</div>
 	</div>
 
-	<button class="calculate-btn" onclick="calculate()">开始计算</button>
+	<button class="calculate-btn" onclick="calculate()">Calculate</button>
 
 	<div class="result" id="result">
 		<div class="result-item"></div>
@@ -352,10 +352,10 @@
 		const yearlyCost = (dailyCost * 365).toFixed(2);
 
 		document.getElementById('result').innerHTML = `
-                <div class="result-item">每日香烟花费：${dailyCost} 元</div>
-                <div class="result-item">每月香烟花费：${monthlyCost} 元</div>
-                <div class="result-item">每年香烟花费：${yearlyCost} 元</div>
-            `;
+				<div class="result-item">Daily cost: ${dailyCost}</div>
+				<div class="result-item">Monthly cost: ${monthlyCost}</div>
+				<div class="result-item">Yearly cost: ${yearlyCost}</div>
+			`;
 	}
 </script>
 <script>

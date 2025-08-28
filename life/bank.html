@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>银行卡类型查询工具-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>Bank Card Type Checker - Chdao Tools</title>
+	<meta name="keywords" content="online tools suite, Chdao Tools">
+	<meta name="description" content="Chdao Tools is an online toolkit with no login or fees. Includes life, developer, encoding/decoding, encryption, image, and entertainment tools.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -103,7 +103,7 @@
 			background-color: #f5f5f5;
 		}
 
-		/* 响应式导航栏 */
+		/* Responsive navigation */
 		nav {
 			background: white;
 			padding: 1rem 2rem;
@@ -148,7 +148,7 @@
 			padding: 0 1rem;
 		}
 
-		/* 工具卡片布局 */
+		/* Tools grid layout */
 		.tools-grid {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -180,7 +180,7 @@
 			padding-left: 1rem;
 		}
 
-		/* 移动端样式 */
+		/* Mobile styles */
 		@media (max-width: 768px) {
 			.nav-categories {
 				display: none;
@@ -236,23 +236,23 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding/Decoding</a>
+			<a href="../dev.html" class="nav-category">💻 Developer Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Entertainment</a>
 		</div>
 	</div>
 </nav>
 
 <div class="container">
-	<h2>银行卡类型查询工具</h2>
+	<h2>Bank Card Type Checker</h2>
 	<form>
-		<label for="cardNumber">请输入银行卡号：</label>
-		<input type="text" id="cardNumber" placeholder="请输入银行卡号">
-		<button class="con-btn" type="button" onclick="checkCardType()">查询</button>
+		<label for="cardNumber">Please enter card number:</label>
+		<input type="text" id="cardNumber" placeholder="Enter card number">
+		<button class="con-btn" type="button" onclick="checkCardType()">Check</button>
 	</form>
 	<div class="result" id="result"></div>
 </div>
@@ -262,13 +262,13 @@
 		var cardNumber = document.getElementById("cardNumber").value.trim();
 
 		if (cardNumber.length == 0) {
-			alert("请输入银行卡号！");
+			alert("Please enter a card number!");
 			return;
 		}
 
 		var reg = /^([1-9]{1})(\d{14}|\d{15}|\d{18})$/;
 		if (!reg.test(cardNumber)) {
-			alert("银行卡号格式不正确！");
+			alert("Invalid card number format!");
 			return;
 		}
 
@@ -279,15 +279,15 @@
 		xhr.onload = function () {
 			if (xhr.status === 200) { // 请求成功处理
 				var response = JSON.parse(xhr.responseText);
-				if (response.validated && response.cardType != "DC") { // 验证通过且不是借记卡
-					document.getElementById("result").textContent = "该银行卡为" + response.bank + response.cardType + "卡";
+				if (response.validated && response.cardType != "DC") { // Validated and not a debit card
+					document.getElementById("result").textContent = "This card is a " + response.bank + " " + response.cardType + " card";
 					return;
 				}
 			}
-			document.getElementById("result").textContent = "该银行卡类型无法查询或为借记卡";
+			document.getElementById("result").textContent = "Unable to identify card type or it's a debit card";
 		};
 		xhr.onerror = function () {
-			document.getElementById("result").textContent = "查询失败，请重试！";
+			document.getElementById("result").textContent = "Request failed, please try again!";
 		};
 		xhr.send();
 	}

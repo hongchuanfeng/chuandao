@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>在线单位转换-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>Online Unit Converter - Chdao Tools</title>
+	<meta name="keywords" content="online tools suite, Chdao Tools">
+	<meta name="description" content="Chdao Tools is an online toolkit with no login or fees. Includes life, developer, encoding/decoding, encryption, image, and entertainment tools.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -109,7 +109,7 @@
 			background-color: #f5f5f5;
 		}
 
-		/* 响应式导航栏 */
+		/* Responsive navigation */
 		nav {
 			background: white;
 			padding: 1rem 2rem;
@@ -154,7 +154,7 @@
 			padding: 0 1rem;
 		}
 
-		/* 工具卡片布局 */
+		/* Tools grid layout */
 		.tools-grid {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -186,7 +186,7 @@
 			padding-left: 1rem;
 		}
 
-		/* 移动端样式 */
+		/* Mobile styles */
 		@media (max-width: 768px) {
 			.nav-categories {
 				display: none;
@@ -241,80 +241,80 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding/Decoding</a>
+			<a href="../dev.html" class="nav-category">💻 Developer Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Entertainment</a>
 		</div>
 	</div>
 </nav>
 
 
 <div class="wrapper">
-	<h1>单位转换工具</h1>
+	<h1>Unit Converter</h1>
 	<form>
 		<div>
-			<label for="speed">速度</label>
-			<input type="number" id="speed" placeholder="请输入数值">
+			<label for="speed">Speed</label>
+			<input type="number" id="speed" placeholder="Enter a value">
 			<select id="speedFrom">
-				<option value="mps">米/秒(m/s)</option>
-				<option value="kph">千米/小时(km/h)</option>
-				<option value="mph">英里/小时(mph)</option>
+				<option value="mps">meters/second (m/s)</option>
+				<option value="kph">kilometers/hour (km/h)</option>
+				<option value="mph">miles/hour (mph)</option>
 			</select>
 			<select id="speedTo">
-				<option value="mps">米/秒(m/s)</option>
-				<option value="kph">千米/小时(km/h)</option>
-				<option value="mph">英里/小时(mph)</option>
+				<option value="mps">meters/second (m/s)</option>
+				<option value="kph">kilometers/hour (km/h)</option>
+				<option value="mph">miles/hour (mph)</option>
 			</select>
 		</div>
 		<div>
-			<label for="gravity">重力</label>
-			<input type="number" id="gravity" placeholder="请输入数值">
+			<label for="gravity">Acceleration</label>
+			<input type="number" id="gravity" placeholder="Enter a value">
 			<select id="gravityFrom">
-				<option value="m/s2">米/秒²</option>
-				<option value="g">标准重力(g)</option>
-				<option value="ft/s2">英尺/秒²</option>
+				<option value="m/s2">meters/second²</option>
+				<option value="g">standard gravity (g)</option>
+				<option value="ft/s2">feet/second²</option>
 			</select>
 			<select id="gravityTo">
-				<option value="m/s2">米/秒²</option>
-				<option value="g">标准重力(g)</option>
-				<option value="ft/s2">英尺/秒²</option>
+				<option value="m/s2">meters/second²</option>
+				<option value="g">standard gravity (g)</option>
+				<option value="ft/s2">feet/second²</option>
 			</select>
 		</div>
 		<div>
-			<label for="volume">体积</label>
-			<input type="number" id="volume" placeholder="请输入数值">
+			<label for="volume">Volume</label>
+			<input type="number" id="volume" placeholder="Enter a value">
 			<select id="volumeFrom">
-				<option value="m3">立方米(m³)</option>
-				<option value="L">升(L)</option>
-				<option value="gal">加仑(gal)</option>
+				<option value="m3">cubic meters (m³)</option>
+				<option value="L">liters (L)</option>
+				<option value="gal">gallons (gal)</option>
 			</select>
 			<select id="volumeTo">
-				<option value="m3">立方米(m³)</option>
-				<option value="L">升(L)</option>
-				<option value="gal">加仑(gal)</option>
+				<option value="m3">cubic meters (m³)</option>
+				<option value="L">liters (L)</option>
+				<option value="gal">gallons (gal)</option>
 			</select>
 		</div>
 		<div>
-			<label for="time">时间</label>
-			<input type="number" id="time" placeholder="请输入数值">
+			<label for="time">Time</label>
+			<input type="number" id="time" placeholder="Enter a value">
 			<select id="timeFrom">
-				<option value="s">秒(s)</option>
-				<option value="min">分钟(min)</option>
-				<option value="h">小时(h)</option>
+				<option value="s">seconds (s)</option>
+				<option value="min">minutes (min)</option>
+				<option value="h">hours (h)</option>
 			</select>
 			<select id="timeTo">
-				<option value="s">秒(s)</option>
-				<option value="min">分钟(min)</option>
-				<option value="h">小时(h)</option>
+				<option value="s">seconds (s)</option>
+				<option value="min">minutes (min)</option>
+				<option value="h">hours (h)</option>
 			</select>
 		</div>
 	</form>
 
-	<button class="con-btn" onclick="convertUnits()">转换</button>
+	<button class="con-btn" onclick="convertUnits()">Convert</button>
 
 	<div class="result" id="result"></div>
 </div>
@@ -334,7 +334,7 @@
 		var timeFrom = document.getElementById("timeFrom").value;
 		var timeTo = document.getElementById("timeTo").value;
 
-		// 速度单位转换
+		// Speed unit conversion
 		var speedResult;
 		if (speedFrom == "mps" && speedTo == "kph") {
 			speedResult = speed * 3.6;
@@ -350,7 +350,7 @@
 			speedResult = speed * 1.609344;
 		}
 
-		// 重力单位转换
+		// Acceleration unit conversion
 		var gravityResult;
 		if (gravityFrom == "m/s2" && gravityTo == "g") {
 			gravityResult = gravity / 9.80665;
@@ -366,7 +366,7 @@
 			gravityResult = gravity / 32.174;
 		}
 
-		// 体积单位转换
+		// Volume unit conversion
 		var volumeResult;
 		if (volumeFrom == "m3" && volumeTo == "L") {
 			volumeResult = volume * 1000;
@@ -382,7 +382,7 @@
 			volumeResult = volume / 0.2641720524;
 		}
 
-		// 时间单位转换
+		// Time unit conversion
 		var timeResult;
 		if (timeFrom == "s" && timeTo == "min") {
 			timeResult = time / 60;
@@ -398,7 +398,7 @@
 			timeResult = time * 60;
 		}
 
-		// 显示转换结果
+		// Show results
 		document.getElementById("result").innerHTML = "";
 		if (speed) {
 			var speedResultText = speed + " " + speedFrom + " = " + speedResult.toFixed(2) + " " + speedTo;
