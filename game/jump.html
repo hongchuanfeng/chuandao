@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>在线山鸡跳跳乐-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>Online Chicken Jump - Chuandao Tools</title>
+	<meta name="keywords" content="online tools collection, Chuandao Tools">
+	<meta name="description" content="Chuandao Tools is an online collection of utilities. No login, no fees, just use and go. Includes life tools, developer tools, encoding/decoding, encryption/decryption, image tools, and games.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -245,13 +245,13 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding</a>
+			<a href="../dev.html" class="nav-category">💻 Dev Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Games</a>
 		</div>
 	</div>
 </nav>
@@ -261,16 +261,16 @@
 
 
 	<header>
-		<h1>山鸡跳跳乐</h1>
+		<h1>Chicken Jump</h1>
 	</header>
 
 	<main>
 		<div class="game-area">
 			<div class="chicken">🐔</div>
 		</div>
-		<div class="score">得分：0</div>
-		<button class="restart-button">重新开始</button>
-		<div class="rule">点击山鸡🐔，加一分！</div>
+		<div class="score">Score: 0</div>
+		<button class="restart-button">Restart</button>
+		<div class="rule">Click the chicken 🐔 to get +1 point!</div>
 		<div id="image-container"></div>
 	</main>
 
@@ -287,7 +287,7 @@
 		chicken.addEventListener('click', function () {
 			if (!isJumping) {
 				score++;
-				scoreText.textContent = '得分：' + score;
+				scoreText.textContent = 'Score: ' + score;
 				jump();
 			}
 		});
@@ -335,7 +335,7 @@
 			chicken.style.pointerEvents = 'auto';
 			restartButton.style.display = 'none';
 			score = 0;
-			scoreText.textContent = '得分：' + score;
+			scoreText.textContent = 'Score: ' + score;
 		}
 	</script>
 </div>
