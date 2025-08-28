@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>在线正则表达式测试工具-传道软件</title>
-    <meta name="keywords" content="在线软件工具集合、传道软件">
-    <meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+    <title>Online Regex Tester - Chandao Tools</title>
+    <meta name="keywords" content="online tool collection, Chandao Tools">
+    <meta name="description" content="Chandao Tools is a collection of free, no-login online utilities across life, dev, encoding/decoding, encryption, images, and fun.">
     <link rel="canonical" href="https://chdaoai.com/">
     <link rel="icon" href="../../favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon"/>
@@ -263,13 +263,13 @@
         </div>
         <button class="menu-btn" onclick="toggleMenu()">☰</button>
         <div class="nav-categories">
-            <a href="../../index.html" class="nav-category">🔍 推荐工具</a>
-            <a href="../../life.html" class="nav-category">🏠 生活工具</a>
-            <a href="../../encry.html" class="nav-category">🔒 加密解密</a>
-            <a href="../../code.html" class="nav-category">📝 编码解码</a>
-            <a href="../../dev.html" class="nav-category">💻 开发工具</a>
-            <a href="../../image.html" class="nav-category">🖼️ 图片处理</a>
-            <a href="../../game.html" class="nav-category">🎮 娱乐工具</a>
+            <a href="../../index.html" class="nav-category">🔍 Recommended</a>
+            <a href="../../life.html" class="nav-category">🏠 Life Tools</a>
+            <a href="../../encry.html" class="nav-category">🔒 Encryption</a>
+            <a href="../../code.html" class="nav-category">📝 Encoding</a>
+            <a href="../../dev.html" class="nav-category">💻 Dev Tools</a>
+            <a href="../../image.html" class="nav-category">🖼️ Image Tools</a>
+            <a href="../../game.html" class="nav-category">🎮 Fun Tools</a>
         </div>
     </div>
 </nav>
@@ -281,18 +281,18 @@
                 <div class="form-group">
                     <div class="btn-toolbar alert alert-info" role="toolbar">
                         <h2 style="text-align: center">
-                            正则表达式测试工具
+                            Regex Tester
                         </h2>
 
 
                         <div class="btn-group btn-group-sm" data-toggle="buttons" role="group">
 
                             <label class="btn btn-default active">
-                                <input type="radio" name="workMode" id="workModeMatch" value="0" checked>查找模式
+                                <input type="radio" name="workMode" id="workModeMatch" value="0" checked>Match mode
 
                             </label>
                             <label class="btn btn-default">
-                                <input type="radio" name="workMode" id="workModeReplace" value="1">替换模式
+                                <input type="radio" name="workMode" id="workModeReplace" value="1">Replace mode
 
 
                             </label>
@@ -307,22 +307,22 @@
                 <div class="form-group">
                     <div class="btn-toolbar alert alert-warning" role="toolbar">
 
-                        <label for=''>正则表达式 :</label>
+                        <label for=''>Regular expression :</label>
                         <div class="btn-group btn-group-xs" data-toggle="buttons" role="group">
-                            <a href='javascript:;' class="copy-link" id="copyLink" title="复制当前正则表达式与替换字符串到URL">
-                                #复制链接
+                            <a href='javascript:;' class="copy-link" id="copyLink" title="Copy current regex and replacement to URL">
+                                #Copy Link
                             </a>
-                            <label class="btn btn-default active" title="选中为匹配所有符合项，否则只匹配第一项，参数g">
-                                <input type="checkbox" name="RegExpOption" id="RegExpOptionGlobal" value="g" checked>全局模式
+                            <label class="btn btn-default active" title="Match all (g), otherwise only first match">
+                                <input type="checkbox" name="RegExpOption" id="RegExpOptionGlobal" value="g" checked>Global (g)
                             </label>
-                            <label class="btn btn-default" title="选中则忽略大小写，参数i">
-                                <input type="checkbox" name="RegExpOption" id="RegExpOptionIgnoreCase" value="i">忽略大小写
+                            <label class="btn btn-default" title="Ignore case (i)">
+                                <input type="checkbox" name="RegExpOption" id="RegExpOptionIgnoreCase" value="i">Ignore case (i)
                             </label>
-                            <label class="btn btn-default" title="选中则转义^和$为行的开始和结束，否则^和$为所有文本的开始和结束">
-                                <input type="checkbox" name="RegExpOption" id="RegExpOptionMultiline" value="m">多行模式
+                            <label class="btn btn-default" title="^ and $ match line boundaries (m)">
+                                <input type="checkbox" name="RegExpOption" id="RegExpOptionMultiline" value="m">Multiline (m)
                             </label>
                         </div>
-                        <textarea class="form-control" style="font-size:x-large" name="" id="tbReg" cols="30" rows="1" placeholder="正则表达式" spellcheck="false"></textarea>
+                        <textarea class="form-control" style="font-size:x-large" name="" id="tbReg" cols="30" rows="1" placeholder="Regular expression" spellcheck="false"></textarea>
                     </div>
                 </div>
             </div>
@@ -331,11 +331,11 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <div class="btn-toolbar alert alert-warning" role="toolbar">
-                        <label for=''>输入字符串 : </label>
+                        <label for=''>Input string: </label>
                         <div class="btn-group btn-group-xs" role="group">
 
                         </div>
-                        <textarea class="form-control" name="" id="tbInput" cols="30" rows="7" placeholder="输入字符串" spellcheck="false"></textarea>
+                        <textarea class="form-control" name="" id="tbInput" cols="30" rows="7" placeholder="Input string" spellcheck="false"></textarea>
                     </div>
                 </div>
             </div>
@@ -344,16 +344,16 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <div class="btn-toolbar alert alert-warning" role="toolbar">
-                        <label for="">替换内容 : </label>
+                        <label for="">Replacement: </label>
                         <div class="btn-group btn-group-xs" data-toggle="buttons" role="group">
-                            <label class="btn btn-default active" title="默认模式，指将源字符串中的匹配结果替换为新内容">
-                                <input type="radio" name="replaceMode" id="replaceModeIncludeNoMatch" value="0" checked>包含不匹配的项目
+                            <label class="btn btn-default active" title="Default mode: replace matches in the source string">
+                                <input type="radio" name="replaceMode" id="replaceModeIncludeNoMatch" value="0" checked>Include non-matched items
                             </label>
-                            <label class="btn btn-default" title="提取模式，用于将源字符串中匹配内容替换后新内容，常用于数据提取">
-                                <input type="radio" name="replaceMode" id="replaceModeExcludeNoMatch" value="1">排除不匹配的项目
+                            <label class="btn btn-default" title="Extract mode: often used for data extraction">
+                                <input type="radio" name="replaceMode" id="replaceModeExcludeNoMatch" value="1">Exclude non-matched items
                             </label>
                         </div>
-                        <textarea class="form-control" name="" id="tbReplace" cols="30" rows="3" placeholder="替换内容" spellcheck="false"></textarea>
+                        <textarea class="form-control" name="" id="tbReplace" cols="30" rows="3" placeholder="Replacement" spellcheck="false"></textarea>
                     </div>
                 </div>
             </div>
@@ -362,24 +362,24 @@
             <div class="col-md-12">
                 <div class="form-group">
                     <div class="btn-toolbar alert alert-warning" role="toolbar">
-                        <label for=''>输出结果:</label>
+                        <label for=''>Output:</label>
 
                         <div class="btn-group btn-group-xs" role="group">
-                            <label class="btn btn-default" title="将输出结果导入输入内容框" id="btnOutputToInput">⬆</label>
+                            <label class="btn btn-default" title="Send output back to input" id="btnOutputToInput">⬆</label>
                         </div>
 
                         <div class="btn-group btn-group-xs" data-toggle="buttons" role="group">
-                            <label class="btn btn-default active" title="window系统换行符,CRLF">
+                            <label class="btn btn-default active" title="Windows newline, CRLF">
                                 <input type="radio" name="newLineChar" id="newLineCharCRLF" value="0" checked>\r\n
                             </label>
-                            <label class="btn btn-default" title="Mac系统换行符,CR">
+                            <label class="btn btn-default" title="Mac newline, CR">
                                 <input type="radio" name="newLineChar" id="newLineCharCR" value="1">\r
                             </label>
-                            <label class="btn btn-default" title="Linux系统换行符,LF">
+                            <label class="btn btn-default" title="Linux newline, LF">
                                 <input type="radio" name="newLineChar" id="newLineCharLF" value="2">\n
                             </label>
                         </div>
-                        <textarea class="form-control" name="" id="tbOutput" cols="30" rows="7" placeholder="输出结果" spellcheck="false"></textarea>
+                        <textarea class="form-control" name="" id="tbOutput" cols="30" rows="7" placeholder="Output" spellcheck="false"></textarea>
                     </div>
                 </div>
             </div>
