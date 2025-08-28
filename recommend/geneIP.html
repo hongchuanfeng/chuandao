@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>随机IP地址生成器-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>Random IP Address Generator - Chuandao Tools</title>
+	<meta name="keywords" content="online tools collection, Chuandao Tools">
+	<meta name="description" content="Chuandao Tools is an online collection of utilities. No login, no fees, just use and go. Includes life tools, developer tools, encoding/decoding, encryption/decryption, image tools, and games.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -260,22 +260,22 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding</a>
+			<a href="../dev.html" class="nav-category">💻 Dev Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Games</a>
 		</div>
 	</div>
 </nav>
 
 
 <div class="container">
-	<h1 style="text-align: center">随机IP地址生成器</h1>
+	<h1 style="text-align: center">Random IP Address Generator</h1>
 	<div class="form-group">
-		<label class="form-label">选择类型</label>
+		<label class="form-label">Select type</label>
 		<div class="radio-group">
 			<label class="radio-item">
 				<input type="radio" name="ipVersion" value="ipv4" checked> IPv4
@@ -287,63 +287,63 @@
 	</div>
 
 	<div class="form-group" id="ipv4ClassGroup">
-		<label class="form-label">IPv4类型</label>
+		<label class="form-label">IPv4 class</label>
 		<div class="radio-group">
 			<label class="radio-item">
-				<input type="radio" name="ipClass" value="any" checked> 不限制
+				<input type="radio" name="ipClass" value="any" checked> Any
 			</label>
 			<label class="radio-item">
-				<input type="radio" name="ipClass" value="a"> A类
+				<input type="radio" name="ipClass" value="a"> Class A
 			</label>
 			<label class="radio-item">
-				<input type="radio" name="ipClass" value="b"> B类
+				<input type="radio" name="ipClass" value="b"> Class B
 			</label>
 			<label class="radio-item">
-				<input type="radio" name="ipClass" value="c"> C类
+				<input type="radio" name="ipClass" value="c"> Class C
 			</label>
 			<label class="radio-item">
-				<input type="radio" name="ipClass" value="d"> D类
+				<input type="radio" name="ipClass" value="d"> Class D
 			</label>
 			<label class="radio-item">
-				<input type="radio" name="ipClass" value="e"> E类
+				<input type="radio" name="ipClass" value="e"> Class E
 			</label>
 		</div>
 	</div>
 
 	<div class="form-group">
-		<label class="form-label">生成数量</label>
+		<label class="form-label">Count</label>
 		<input type="number" class="input-number" id="count" value="10" min="1" max="100">
 	</div>
 
 	<div class="form-group">
-		<label class="form-label">唯一性</label>
+		<label class="form-label">Uniqueness</label>
 		<div class="radio-group">
 			<label class="radio-item">
-				<input type="radio" name="unique" value="false" checked> 不限制
+				<input type="radio" name="unique" value="false" checked> Allow duplicates
 			</label>
 			<label class="radio-item">
-				<input type="radio" name="unique" value="true"> 保证唯一
+				<input type="radio" name="unique" value="true"> Ensure unique
 			</label>
 		</div>
 	</div>
 
-	<button class="generate-btn" onclick="generateIPs()">开始生成</button>
+	<button class="generate-btn" onclick="generateIPs()">Generate</button>
 
 	<div class="result-container" id="resultContainer">
-		<!-- 生成的IP地址将显示在这里 -->
+		<!-- Generated IP addresses will appear here -->
 	</div>
 
 	<div class="info-box">
-		<h3 class="info-title">关于随机IP地址生成器介绍：</h3>
+		<h3 class="info-title">About the Random IP Address Generator:</h3>
 		<ul class="info-list">
-			<li>1、您可以使用本工具生成IPv4或IPv6地址。</li>
-			<li>2、IPv4可以分类型进行机制生成，比如A类地址，B类地址。</li>
-			<li>3、可以保证生成的多个IP中重复可以复复</li>
-			<li>4、IPv4 A类地址范围：0.0.0.0 到 127.255.255.255</li>
-			<li>5、IPv4 B类地址范围：128.0.0.0 到 191.255.255.255</li>
-			<li>6、IPv4 C类地址范围：192.0.0.0 到 223.255.255.255</li>
-			<li>7、IPv4 D类地址范围：224.0.0.0 到 239.255.255.255</li>
-			<li>8、IPv4 E类地址范围：240.0.0.0 到 255.255.255.255</li>
+			<li>1. Generate IPv4 or IPv6 addresses.</li>
+			<li>2. For IPv4, choose by class (A/B/C/D/E).</li>
+			<li>3. Optionally ensure uniqueness across results.</li>
+			<li>4. IPv4 Class A: 0.0.0.0 – 127.255.255.255</li>
+			<li>5. IPv4 Class B: 128.0.0.0 – 191.255.255.255</li>
+			<li>6. IPv4 Class C: 192.0.0.0 – 223.255.255.255</li>
+			<li>7. IPv4 Class D: 224.0.0.0 – 239.255.255.255</li>
+			<li>8. IPv4 Class E: 240.0.0.0 – 255.255.255.255</li>
 		</ul>
 	</div>
 </div>

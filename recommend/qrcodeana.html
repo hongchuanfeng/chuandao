@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>二维码解析-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>QR Code Decoder - Chuandao Tools</title>
+	<meta name="keywords" content="online tools collection, Chuandao Tools">
+	<meta name="description" content="Chuandao Tools is an online collection of utilities. No login, no fees, just use and go. Includes life tools, developer tools, encoding/decoding, encryption/decryption, image tools, and games.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -290,38 +290,38 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding</a>
+			<a href="../dev.html" class="nav-category">💻 Dev Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Games</a>
 		</div>
 	</div>
 </nav>
 
 
-<h1 style="text-align: center">二维码解析</h1>
+<h1 style="text-align: center">QR Code Decoder</h1>
 <div class="container">
 	<div class="upload-area" id="dropArea" onclick="document.getElementById('fileInput').click()">
 		<input type="file" id="fileInput" hidden accept="image/*" onchange="handleFile(event)">
 		<div class="upload-icon">☁️</div>
-		<div class="upload-text">点击上传，或将图片拖拽到此处</div>
+		<div class="upload-text">Click to upload, or drag an image here</div>
 		<img id="preview" alt="预览图">
 	</div>
 
-	<input type="text" class="url-input" id="urlInput" placeholder="输入远程图片URL">
-	<button class="decode-btn" onclick="decodeURL()">解码</button>
+	<input type="text" class="url-input" id="urlInput" placeholder="Enter remote image URL">
+	<button class="decode-btn" onclick="decodeURL()">Decode</button>
 
 	<div class="result" id="result"></div>
 
 	<div class="info-box">
-		<h3 class="info-title">关于二维码解析工具介绍：</h3>
+		<h3 class="info-title">About the QR Code Decoder:</h3>
 		<ul class="info-list">
-			<li>1、本工具可以将在线图片或本地图片中的二维码解析成文本。</li>
-			<li>2、远程图片可以用于各种网站上的图片，可下载后本地进行上传解析。</li>
-			<li>3、本工具全部在前端运行，你上传的图片不会上传到服务器，请放心使用。</li>
+			<li>1. Decode QR codes from online or local images into text.</li>
+			<li>2. For remote images, paste the URL or download and upload locally.</li>
+			<li>3. Runs entirely in your browser; images are not uploaded to a server.</li>
 		</ul>
 	</div>
 </div>
@@ -370,7 +370,7 @@
 	function decodeURL() {
 		const url = document.getElementById('urlInput').value.trim();
 		if (!url) {
-			alert('请输入图片URL！');
+			alert('Please enter an image URL!');
 			return;
 		}
 
@@ -386,7 +386,7 @@
 			decodeQR(canvas.toDataURL());
 		};
 		img.onerror = function() {
-			alert('图片加载失败！');
+			alert('Failed to load image!');
 		};
 		img.src = url;
 	}
@@ -407,11 +407,11 @@
 
 			if (code) {
 				result.innerHTML = `
-                        <h3 style="color: #00b894; margin-bottom: 10px;">解析结果：</h3>
+                        <h3 style="color: #00b894; margin-bottom: 10px;">Decoded Result:</h3>
                         <p>${code.data}</p>
                     `;
 			} else {
-				result.innerHTML = '未能识别二维码，请确保图片清晰且包含有效的二维码。';
+				result.innerHTML = 'Could not detect a QR code. Ensure the image is clear and contains a valid QR code.';
 			}
 		};
 		img.src = imageData;

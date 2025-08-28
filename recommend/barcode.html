@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>条形码生成器-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>Barcode Generator - Chuandao Tools</title>
+	<meta name="keywords" content="online tools collection, Chuandao Tools">
+	<meta name="description" content="Chuandao Tools is an online collection of utilities. No login, no fees, just use and go. Includes life tools, developer tools, encoding/decoding, encryption/decryption, image tools, and games.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -271,13 +271,13 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding</a>
+			<a href="../dev.html" class="nav-category">💻 Dev Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Games</a>
 		</div>
 	</div>
 </nav>
@@ -286,94 +286,94 @@
 <div class="header">
 
 	<div class="header-title">
-		<h2>条形码生成器</h2>
+		<h2>Barcode Generator</h2>
 	</div>
 </div>
 
 <div class="container">
 	<div class="settings">
 		<div class="form-group">
-			<label class="form-label">条码内容</label>
+			<label class="form-label">Barcode content</label>
 			<input type="text" class="form-input" id="content" value="https://chdaoai.com/">
 		</div>
 
 		<div class="form-group">
-			<label class="form-label">条码类型</label>
+			<label class="form-label">Barcode type</label>
 			<input type="text" class="form-input" id="format" value="CODE128" readonly>
 		</div>
 
 		<div class="form-group">
-			<label class="form-label">线条宽度</label>
+			<label class="form-label">Bar width</label>
 			<input type="number" class="form-input" id="width" value="2" min="1" max="10">
 		</div>
 
 		<div class="form-group">
-			<label class="form-label">线条高度</label>
+			<label class="form-label">Bar height</label>
 			<input type="number" class="form-input" id="height" value="60" min="20" max="200">
 		</div>
 
 		<div class="form-group">
-			<label class="form-label">显示文字</label>
+			<label class="form-label">Display text</label>
 			<div class="radio-group">
 				<label class="radio-item">
-					<input type="radio" name="displayText" value="show" checked> 显示
+					<input type="radio" name="displayText" value="show" checked> Show
 				</label>
 				<label class="radio-item">
-					<input type="radio" name="displayText" value="hide"> 隐藏
+					<input type="radio" name="displayText" value="hide"> Hide
 				</label>
 			</div>
 		</div>
 
 		<div class="form-group">
-			<label class="form-label">文字字号</label>
+			<label class="form-label">Font size</label>
 			<input type="number" class="form-input" id="fontSize" value="20" min="10" max="40">
 		</div>
 
 		<div class="form-group">
-			<label class="form-label">水平对齐</label>
+			<label class="form-label">Horizontal align</label>
 			<div class="radio-group">
 				<label class="radio-item">
-					<input type="radio" name="align" value="left"> 居左
+					<input type="radio" name="align" value="left"> Left
 				</label>
 				<label class="radio-item">
-					<input type="radio" name="align" value="center" checked> 居中
+					<input type="radio" name="align" value="center" checked> Center
 				</label>
 				<label class="radio-item">
-					<input type="radio" name="align" value="right"> 居右
+					<input type="radio" name="align" value="right"> Right
 				</label>
 			</div>
 		</div>
 
 		<div class="form-group">
-			<label class="form-label">文字位置</label>
+			<label class="form-label">Text position</label>
 			<div class="radio-group">
 				<label class="radio-item">
-					<input type="radio" name="textPosition" value="bottom" checked> 条码之下
+					<input type="radio" name="textPosition" value="bottom" checked> Below barcode
 				</label>
 				<label class="radio-item">
-					<input type="radio" name="textPosition" value="top"> 条码之上
+					<input type="radio" name="textPosition" value="top"> Above barcode
 				</label>
 			</div>
 		</div>
 
 		<div class="form-group">
-			<label class="form-label">背景颜色</label>
+			<label class="form-label">Background color</label>
 			<input type="color" class="color-picker" id="backgroundColor" value="#FFFFFF">
 		</div>
 
 		<div class="form-group">
-			<label class="form-label">前景颜色</label>
+			<label class="form-label">Foreground color</label>
 			<input type="color" class="color-picker" id="lineColor" value="#000000">
 		</div>
 
 		<div class="form-group">
-			<label class="form-label">白边距离</label>
+			<label class="form-label">Margin</label>
 			<input type="number" class="form-input" id="margin" value="10" min="0" max="50">
 		</div>
 
 		<div class="btn-group">
-			<button class="btn btn-primary" onclick="generateBarcode()">开始生成</button>
-			<button class="btn btn-secondary" onclick="downloadBarcode()">下载条形码</button>
+			<button class="btn btn-primary" onclick="generateBarcode()">Generate</button>
+			<button class="btn btn-secondary" onclick="downloadBarcode()">Download barcode</button>
 		</div>
 	</div>
 
@@ -382,17 +382,17 @@
 	</div>
 
 	<div class="info-box">
-		<h3>关于条形码生成器介绍：</h3>
+		<h3>About the Barcode Generator:</h3>
 		<ol>
-			<li>条形码是一种自动识别技术，它使用一组规范不等的条和空来表示数字、字母或其他符号。</li>
-			<li>条形码中的数据可以通过扫描工具来采集，从而快速准确获取条形码中的内容。</li>
-			<li>条形码由以下元素组成：</li>
+			<li>Barcodes are an automatic identification technology using bars and spaces to represent data.</li>
+			<li>Barcode data can be scanned to quickly and accurately retrieve content.</li>
+			<li>Barcode elements include:</li>
 			<ul>
-				<li>(1) 条形码符号：由黑白条纹和空白区域组成，条纹宽度表示不同数字或字符。</li>
-				<li>(2) 条形码起始符：位于条形码起始位置，用于指示条形码的开始。</li>
-				<li>(3) 条形码数据区：包含需要表示的数据，数据区可以分为多个字符。</li>
-				<li>(4) 条形码终止符：位于条形码结尾，用于指示条形码的结束位置。</li>
-				<li>(5) 条形码校验符：位于数据区下方，用于检查条形码数据的准确性。</li>
+				<li>(1) Symbol: bars/spaces encoding digits or characters.</li>
+				<li>(2) Start character: indicates the beginning of the barcode.</li>
+				<li>(3) Data area: contains the encoded data.</li>
+				<li>(4) Stop character: indicates the end of the barcode.</li>
+				<li>(5) Check digit: verifies data accuracy.</li>
 			</ul>
 		</ol>
 	</div>
@@ -446,7 +446,7 @@
 		img.src = 'data:image/svg+xml;base64,' + btoa(svgData);
 	}
 
-	// 页面加载时生成默认条形码
+	// Generate default barcode on load
 	window.onload = generateBarcode;
 </script>
 <script>

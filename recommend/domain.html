@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>域名解析记录查询-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>DNS Record Lookup - Chuandao Tools</title>
+	<meta name="keywords" content="online tools collection, Chuandao Tools">
+	<meta name="description" content="Chuandao Tools is an online collection of utilities. No login, no fees, just use and go. Includes life tools, developer tools, encoding/decoding, encryption/decryption, image tools, and games.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -296,13 +296,13 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding</a>
+			<a href="../dev.html" class="nav-category">💻 Dev Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Games</a>
 		</div>
 	</div>
 </nav>
@@ -310,10 +310,10 @@
 
 <div class="container">
 	<div class="search-container">
-		<h1 class="search-title">域名解析记录查询</h1>
+		<h1 class="search-title">DNS Record Lookup</h1>
 		<div class="search-box">
-			<input type="text" class="search-input" id="domainInput" placeholder="输入网址">
-			<button class="search-btn" onclick="searchDomain()">查询</button>
+			<input type="text" class="search-input" id="domainInput" placeholder="Enter a domain">
+			<button class="search-btn" onclick="searchDomain()">Search</button>
 		</div>
 	</div>
 
@@ -322,22 +322,22 @@
 	</div>
 
 	<div class="info-box">
-		<h3 class="info-title">关于域名解析介绍：</h3>
+		<h3 class="info-title">About DNS records:</h3>
 		<ul class="info-list">
-			<li>1、域名解析是互联网上将域名转换为与之对应的IP地址的过程。</li>
-			<li>2、域名解析的类型：</li>
+			<li>1. DNS resolves a domain name to its corresponding IP address.</li>
+			<li>2. Common record types:</li>
 			<ul style="margin-left: 20px;">
-				<li>(1)、A记录：将域名解析到一个IPv4地址。</li>
-				<li>(2)、AAAA记录：将域名解析到一个IPv6地址。</li>
-				<li>(3)、CNAME记录：将域名解析到另一个域名（通常用于子域名或负载均衡）。</li>
-				<li>(4)、MX记录：用于电子邮件，将域名解析到处理电子邮件的服务器地址。</li>
-				<li>(5)、TXT记录：用于在域名上存储文本信息，常用于验证域名所有权或配置邮件服务。</li>
+				<li>(1) A: maps to an IPv4 address.</li>
+				<li>(2) AAAA: maps to an IPv6 address.</li>
+				<li>(3) CNAME: alias to another domain.</li>
+				<li>(4) MX: mail exchanger record.</li>
+				<li>(5) TXT: text data (e.g., verification, SPF).</li>
 			</ul>
 		</ul>
 	</div>
 
 	<div class="history-container">
-		<h3 class="history-title">最近查询：</h3>
+		<h3 class="history-title">Recent Queries:</h3>
 		<div id="historyList">
 			<div class="history-item">openai2025.com</div>
 		</div>
@@ -350,7 +350,7 @@
 		const resultContainer = document.getElementById('resultContainer');
 
 		if (!domain) {
-			alert('请输入要查询的域名！');
+			alert('Please enter a domain to look up!');
 			return;
 		}
 
@@ -441,13 +441,13 @@
 					// 这里应该调用实际的DNS查询API
 					// 以下为模拟数据
 					resultContainer.innerHTML = `
-								<h3>查询结果：${domain}</h3>
+								<h3>Results: ${domain}</h3>
 								<table class="record-table">
 									<thead>
 										<tr>
-											<th>记录类型</th>
-											<th>主机记录</th>
-											<th>记录值</th>
+											<th>Type</th>
+											<th>Host</th>
+											<th>Value</th>
 											<th>TTL</th>
 										</tr>
 									</thead>

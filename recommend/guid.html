@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>GUID生成工具-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>GUID Generator - Chuandao Tools</title>
+	<meta name="keywords" content="online tools collection, Chuandao Tools">
+	<meta name="description" content="Chuandao Tools is an online collection of utilities. No login, no fees, just use and go. Includes life tools, developer tools, encoding/decoding, encryption/decryption, image tools, and games.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -140,7 +140,7 @@
 			background-color: #f5f5f5;
 		}
 
-		/* 响应式导航栏 */
+		/* Responsive navbar */
 		nav {
 			background: white;
 			padding: 1rem 2rem;
@@ -274,13 +274,13 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding</a>
+			<a href="../dev.html" class="nav-category">💻 Dev Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Games</a>
 		</div>
 	</div>
 </nav>
@@ -288,44 +288,44 @@
 
 
 <div class="container">
-	<h1 style="text-align: center">GUID生成工具</h1>
+	<h1 style="text-align: center">GUID Generator</h1>
 	<div class="settings">
 		<div class="form-group">
-			<label class="form-label">生成数量</label>
+			<label class="form-label">Count</label>
 			<input type="number" class="input-number" id="count" value="5" min="1" max="100">
 		</div>
 
 		<div class="form-group">
-			<label class="form-label">是否大写</label>
+			<label class="form-label">Uppercase</label>
 			<div class="radio-group">
 				<label class="radio-item">
-					<input type="radio" name="case" value="lower" checked> 小写
+					<input type="radio" name="case" value="lower" checked> Lowercase
 				</label>
 				<label class="radio-item">
-					<input type="radio" name="case" value="upper"> 大写
+					<input type="radio" name="case" value="upper"> Uppercase
 				</label>
 			</div>
 		</div>
 
 		<div class="form-group">
-			<label class="form-label">分隔符(-)</label>
+			<label class="form-label">Separator (-)</label>
 			<div class="radio-group">
 				<label class="radio-item">
-					<input type="radio" name="separator" value="true" checked> 开启
+					<input type="radio" name="separator" value="true" checked> On
 				</label>
 				<label class="radio-item">
-					<input type="radio" name="separator" value="false"> 关闭
+					<input type="radio" name="separator" value="false"> Off
 				</label>
 			</div>
 		</div>
 
-		<button class="generate-btn" onclick="generateGUIDs()">开始生成</button>
+		<button class="generate-btn" onclick="generateGUIDs()">Generate</button>
 	</div>
 
 	<table class="result-table">
 		<thead>
 		<tr>
-			<th>序号</th>
+			<th>No.</th>
 			<th>GUID</th>
 		</tr>
 		</thead>
@@ -333,13 +333,13 @@
 	</table>
 
 	<div class="info-box">
-		<h3 class="info-title">关于GUID介绍：</h3>
+		<h3 class="info-title">About GUIDs:</h3>
 		<ul class="info-list">
-			<li>1、GUID是一种由算法生成的128位标识符，用于在分布式计算环境中唯一标识对象。</li>
-			<li>2、GUID的设计目的是保证在时间和空间上的唯一性。</li>
-			<li>3、GUID用于于建数据库的主注重、标识网上的设备、文件、应用程序等场景。</li>
-			<li>4、GUID通常以32位十六进制数的形式表示，每个GUID由5组8位的十六进制数组成，每组之间用连字符分隔。</li>
-			<li>5、GUID在多个网络通信和操作系统中都有广泛的支持，使用性比较广泛。</li>
+			<li>1. A GUID is a 128-bit identifier used to uniquely identify objects in distributed systems.</li>
+			<li>2. It aims for uniqueness across time and space.</li>
+			<li>3. Common uses: database keys, device/file/app identifiers.</li>
+			<li>4. Typically represented as 32 hex digits in 5 groups separated by hyphens.</li>
+			<li>5. Widely supported across networks and operating systems.</li>
 		</ul>
 	</div>
 </div>
@@ -378,7 +378,7 @@
 		}
 	}
 
-	// 页面加载时生成默认的GUIDs
+	// Generate default GUIDs on load
 	window.onload = generateGUIDs;
 </script>
 <script>

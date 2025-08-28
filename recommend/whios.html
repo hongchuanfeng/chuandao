@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>域名WHIOS查询-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>Domain WHOIS Lookup - Chuandao Tools</title>
+	<meta name="keywords" content="online tools collection, Chuandao Tools">
+	<meta name="description" content="Chuandao Tools is an online collection of utilities. No login, no fees, just use and go. Includes life tools, developer tools, encoding/decoding, encryption/decryption, image tools, and games.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -137,7 +137,7 @@
 			background-color: #f5f5f5;
 		}
 
-		/* 响应式导航栏 */
+		/* Responsive navbar */
 		nav {
 			background: white;
 			padding: 1rem 2rem;
@@ -272,13 +272,13 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding</a>
+			<a href="../dev.html" class="nav-category">💻 Dev Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Games</a>
 		</div>
 	</div>
 </nav>
@@ -286,10 +286,10 @@
 
 <div class="container">
 	<div class="search-container">
-		<h1 class="search-title">域名WHOIS查询</h1>
+		<h1 class="search-title">Domain WHOIS Lookup</h1>
 		<div class="search-box">
-			<input type="text" class="search-input" id="domainInput" placeholder="输入网址">
-			<button class="search-btn" onclick="searchDomain()">查询</button>
+			<input type="text" class="search-input" id="domainInput" placeholder="Enter a domain">
+			<button class="search-btn" onclick="searchDomain()">Search</button>
 		</div>
 	</div>
 
@@ -298,27 +298,27 @@
 	</div>
 
 	<div class="info-box">
-		<h3 class="info-title">关于Whois查询介绍：</h3>
+		<h3 class="info-title">About WHOIS:</h3>
 		<ul class="info-list">
-			<li>1、本工具可以查询域名是否已被注册或过期，以及域名注册的详细信息。</li>
-			<li>2、关于域名到期时候的相应解决办法。</li>
-			<li>国际域名：</li>
+			<li>1. Check if a domain is registered/expired and view registration details.</li>
+			<li>2. Learn about handling domain expiration.</li>
+			<li>Generic domains:</li>
 			<ul class="sub-list">
-				<li>(1) 到期后无法修改，如果在72小时未续费，则解除域名DNS指向广告页面（修改），域名到期后30-45天为域名保留期（不可注册商或第似注册用户不用）</li>
-				<li>(2) 过了保留期域名将进入赎回期间（REDEMPTIONPERIOD，为期30天）</li>
-				<li>(3) 过了赎回期域名将进入人为服务天左右的删除期，删除期过后域名开放，任何人可注。</li>
+				<li>(1) After expiry: 30–45 day grace period; limited changes allowed.</li>
+				<li>(2) Redemption period: ~30 days after grace period.</li>
+				<li>(3) Pending delete: ~5 days; then released to public.</li>
 			</ul>
-			<li>国内域名：</li>
+			<li>Domestic domains (CN):</li>
 			<ul class="sub-list">
-				<li>(1) 到期后无法修改，如果在72小时未续费，则解除域名DNS指向广告页面（修改），35天内，可以自动续费。</li>
-				<li>(2) 过期后36～48天，将进入15天的高价赎回期，此期间域名无法查看。</li>
-				<li>(3) 过期后48天后仍未续费的，域名将随时被删除。</li>
+				<li>(1) 35-day grace renewal window.</li>
+				<li>(2) Then a 15-day redemption period; domain not accessible.</li>
+				<li>(3) After ~48 days, domain may be deleted at any time.</li>
 			</ul>
 		</ul>
 	</div>
 
 	<div class="history-container">
-		<h3 class="history-title">最近查询：</h3>
+		<h3 class="history-title">Recent Queries:</h3>
 		<div id="historyList"></div>
 	</div>
 </div>
@@ -329,7 +329,7 @@
 		const resultContainer = document.getElementById('resultContainer');
 
 		if (!domain) {
-			alert('请输入要查询的域名！');
+			alert('Please enter a domain to look up!');
 			return;
 		}
 
@@ -377,14 +377,14 @@
 			console.log(createdDate);
 
 			resultContainer.innerHTML = `
-                <h3>查询结果：</h3>
-                <p>域名：${domain}</p>
-                <p>注册商：${registrarName}</p>
-                <p>创建时间：${createdDate}</p>
-                <p>到期时间：${expiresDate}</p>
-                <p>状态：${status}</p>
-                <p>国家：${country}</p>
-                <p>城市：${state}</p>
+                <h3>Result:</h3>
+                <p>Domain: ${domain}</p>
+                <p>Registrar: ${registrarName}</p>
+                <p>Created: ${createdDate}</p>
+                <p>Expires: ${expiresDate}</p>
+                <p>Status: ${status}</p>
+                <p>Country: ${country}</p>
+                <p>State/Province: ${state}</p>
             `;
 
 			// 添加到历史记录

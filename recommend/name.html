@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>姓名生成器-传道软件</title>
-    <meta name="keywords" content="在线软件工具集合、传道软件">
-    <meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+    <title>Name Generator - Chuandao Tools</title>
+    <meta name="keywords" content="online tools collection, Chuandao Tools">
+    <meta name="description" content="Chuandao Tools is an online collection of utilities. No login, no fees, just use and go. Includes life tools, developer tools, encoding/decoding, encryption/decryption, image tools, and games.">
     <link rel="canonical" href="https://chdaoai.com/">
     <link rel="icon" href="../favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -289,67 +289,67 @@
         </div>
         <button class="menu-btn" onclick="toggleMenu()">☰</button>
         <div class="nav-categories">
-            <a href="../index.html" class="nav-category">🔍 推荐工具</a>
-            <a href="../life.html" class="nav-category">🏠 生活工具</a>
-            <a href="../encry.html" class="nav-category">🔒 加密解密</a>
-            <a href="../code.html" class="nav-category">📝 编码解码</a>
-            <a href="../dev.html" class="nav-category">💻 开发工具</a>
-            <a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-            <a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+            <a href="../index.html" class="nav-category">🔍 Recommended</a>
+            <a href="../life.html" class="nav-category">🏠 Life Tools</a>
+            <a href="../encry.html" class="nav-category">🔒 Encryption</a>
+            <a href="../code.html" class="nav-category">📝 Encoding</a>
+            <a href="../dev.html" class="nav-category">💻 Dev Tools</a>
+            <a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+            <a href="../game.html" class="nav-category">🎮 Games</a>
         </div>
     </div>
 </nav>
 
 
 <h1 style="text-align: center">
-    姓名生成器
+    Name Generator
 </h1>
 
 <div class="generator">
     <div class="input-group">
-        <div class="input-label">选择性别</div>
+        <div class="input-label">Select gender</div>
         <div class="radio-group">
             <label class="radio-item">
                 <input type="radio" name="gender" value="male">
-                男
+                Male
             </label>
             <label class="radio-item">
                 <input type="radio" name="gender" value="female">
-                女
+                Female
             </label>
             <label class="radio-item">
                 <input type="radio" name="gender" value="all" checked>
-                全部
+                All
             </label>
         </div>
     </div>
 
     <div class="input-group">
-        <div class="input-label">名字长度</div>
+        <div class="input-label">Name length</div>
         <input type="number" class="input-field" id="nameLength" value="3" min="2" max="4">
     </div>
 
     <div class="input-group">
-        <div class="input-label">生成数量</div>
+        <div class="input-label">Count</div>
         <input type="number" class="input-field" id="generateCount" value="10" min="1" max="50">
     </div>
 
     <div class="input-group">
-        <div class="input-label">输入姓氏</div>
+        <div class="input-label">Enter last name</div>
         <input type="text" class="input-field" id="lastName" value="李">
     </div>
 
-    <button class="generate-btn" onclick="generateNames()">开始生成</button>
+    <button class="generate-btn" onclick="generateNames()">Generate</button>
 
     <div class="result" id="result"></div>
 
     <div class="info-box">
-        <h3 class="info-title">关于姓名生成器介绍：</h3>
+        <h3 class="info-title">About the Name Generator:</h3>
         <ul class="info-list">
-            <li>1、本工具可以随机生成多个名字供参考。</li>
-            <li>2、输入要生成的姓氏，支持单姓。</li>
-            <li>3、输入名字的长度，最短为2个字，最长为3个字，官方版本为建议3个字。</li>
-            <li>4、输入生成的数量，多以供选择多个供参考。</li>
+            <li>1. Randomly generates multiple names for reference.</li>
+            <li>2. Enter a last name (single-character surnames supported).</li>
+            <li>3. Name length from 2 to 4 characters (3 recommended).</li>
+            <li>4. Choose how many names to generate.</li>
         </ul>
     </div>
 </div>
@@ -367,17 +367,17 @@
         const result = document.getElementById('result');
 
         if (!lastName) {
-            alert('请输入姓氏！');
+            alert('Please enter a last name!');
             return;
         }
 
         if (nameLength < 2 || nameLength > 4) {
-            alert('名字长度需要在2-4个字之间！');
+            alert('Name length must be between 2 and 4 characters!');
             return;
         }
 
         if (count < 1 || count > 50) {
-            alert('生成数量需要在1-50之间！');
+            alert('Count must be between 1 and 50!');
             return;
         }
 
@@ -401,7 +401,7 @@
 
         result.style.display = 'block';
         result.innerHTML = `
-                <h3 style="color: #00b894; margin-bottom: 10px;">生成结果：</h3>
+                <h3 style="color: #00b894; margin-bottom: 10px;">Generated Names:</h3>
                 <div style="line-height: 2;">${names.join('、')}</div>
             `;
     }
@@ -411,7 +411,7 @@
         const nav = document.querySelector('.nav-categories');
         nav.classList.toggle('active');
 
-        // 点击菜单项后自动关闭
+        // Auto-close after clicking a menu item
         document.querySelectorAll('.nav-category').forEach(item => {
             item.addEventListener('click', () => {
                 if (window.innerWidth <= 768) {
