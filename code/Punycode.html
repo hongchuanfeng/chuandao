@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Punycode编码解码工具-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>Punycode Encoder/Decoder - Chandao Tools</title>
+	<meta name="keywords" content="online tool collection, Chandao Tools">
+	<meta name="description" content="Chandao Tools is a collection of free, no-login online utilities across life, dev, encoding/decoding, encryption, images, and fun.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -258,45 +258,45 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding</a>
+			<a href="../dev.html" class="nav-category">💻 Dev Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Fun Tools</a>
 		</div>
 	</div>
 </nav>
 <div class="container">
-	<h2>Punycode编码/解码工具</h2>
+	<h2>Punycode Encoder/Decoder</h2>
 
 	<div class="input-group">
-		<div class="punycode-label">原始内容：</div>
-		<textarea id="originalInput" placeholder="输入要编码的内容..."></textarea>
+		<div class="punycode-label">Original content:</div>
+		<textarea id="originalInput" placeholder="Enter content to encode..."></textarea>
 	</div>
 
 	<div class="button-group">
-		<button class="encode-btn" onclick="encodePunycode()">Punycode 编码 ↓</button>
-		<button class="decode-btn" onclick="decodePunycode()">Punycode 解码 ↑</button>
-		<button class="clear-btn" onclick="clearAll()">清空</button>
+		<button class="encode-btn" onclick="encodePunycode()">Punycode Encode</button>
+		<button class="decode-btn" onclick="decodePunycode()">Punycode Decode</button>
+		<button class="clear-btn" onclick="clearAll()">Clear</button>
 	</div>
 
 	<div class="input-group">
-		<div class="punycode-label">转换结果：</div>
-		<textarea id="resultOutput" placeholder="输入要解码的内容..."></textarea>
+		<div class="punycode-label">Converted result:</div>
+		<textarea id="resultOutput" placeholder="Enter content to decode..."></textarea>
 	</div>
 
 	<div class="error" id="errorMsg"></div>
 
 	<div class="instructions">
-		<h3>关于Punycode介绍：</h3>
+		<h3>About Punycode:</h3>
 		<ol>
-			<li>Punycode 是一种编码系统，主要用于将域名从Unicode格式转换为ASCII</li>
-			<li>编码后的字符串只包含ASCII字符，确保与现有系统的兼容性</li>
-			<li>编码过程是可逆的，通过解码可以还原原始的非ASCII字符串</li>
-			<li>包含安全机制，防止某些类型的编码攻击</li>
-			<li>域名系统(DNS)只支持ASCII字符，因此Punycode应运而生</li>
+			<li>Punycode converts Unicode domain labels to ASCII for DNS compatibility.</li>
+			<li>Output contains ASCII-only characters for broad system support.</li>
+			<li>Reversible: decoding restores the original non-ASCII text.</li>
+			<li>Includes safeguards against certain encoding-based attacks.</li>
+			<li>DNS only supports ASCII, hence Punycode exists.</li>
 		</ol>
 	</div>
 </div>
@@ -306,13 +306,13 @@
 	function encodePunycode() {
 		try {
 			const input = document.getElementById('originalInput').value.trim();
-			if (!input) throw new Error('请输入要编码的内容');
+			if (!input) throw new Error('Please enter content to encode');
 
 			const encoded = punycode.toASCII(input);
 			document.getElementById('resultOutput').value = encoded;
 			hideError();
 		} catch (error) {
-			showError('编码失败：' + error.message);
+			showError('Encoding failed: ' + error.message);
 		}
 	}
 
@@ -320,13 +320,13 @@
 	function decodePunycode() {
 		try {
 			const input = document.getElementById('resultOutput').value.trim();
-			if (!input) throw new Error('请输入要解码的内容');
+			if (!input) throw new Error('Please enter content to decode');
 
 			const decoded = punycode.toUnicode(input);
 			document.getElementById('originalInput').value = decoded;
 			hideError();
 		} catch (error) {
-			showError('解码失败：' + error.message);
+			showError('Decoding failed: ' + error.message);
 		}
 	}
 

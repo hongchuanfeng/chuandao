@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Base64编码解码-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>Base64 Encode/Decode - Chuandao Tools</title>
+	<meta name="keywords" content="Base64, encode, decode, Chuandao Tools">
+	<meta name="description" content="Encode or decode Base64 strings. Works with UTF-8 text and runs locally in your browser.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -122,7 +122,7 @@
 			background-color: #f5f5f5;
 		}
 
-		/* 响应式导航栏 */
+		/* Responsive navigation bar */
 		nav {
 			background: white;
 			padding: 1rem 2rem;
@@ -167,7 +167,7 @@
 			padding: 0 1rem;
 		}
 
-		/* 工具卡片布局 */
+		/* Tool card layout */
 		.tools-grid {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -199,7 +199,7 @@
 			padding-left: 1rem;
 		}
 
-		/* 移动端样式 */
+		/* Mobile styles */
 		@media (max-width: 768px) {
 			.nav-categories {
 				display: none;
@@ -256,37 +256,37 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Featured</a>
+			<a href="../life.html" class="nav-category">🏠 Life</a>
+			<a href="../encry.html" class="nav-category">🔒 Crypto</a>
+			<a href="../code.html" class="nav-category">📝 Encode/Decode</a>
+			<a href="../dev.html" class="nav-category">💻 Developer</a>
+			<a href="../image.html" class="nav-category">🖼️ Image</a>
+			<a href="../game.html" class="nav-category">🎮 Fun</a>
 		</div>
 	</div>
 </nav>
 
 <div class="container">
-	<h1>Base64编码/解码</h1>
+	<h1>Base64 Encode/Decode</h1>
 
-	<textarea id="encodeInput" placeholder="输入需要编码的文本内容..."></textarea>
+	<textarea id="encodeInput" placeholder="Enter text to encode..."></textarea>
 
 	<div class="btn-group">
-		<button id="encodeBtn" onclick="encodeBase64()">Base64编码 ↓</button>
-		<button id="decodeBtn" onclick="decodeBase64()">Base64解码 ↑</button>
-		<button id="clearBtn" onclick="clearAll()">清空</button>
+		<button id="encodeBtn" onclick="encodeBase64()">Base64 Encode ↓</button>
+		<button id="decodeBtn" onclick="decodeBase64()">Base64 Decode ↑</button>
+		<button id="clearBtn" onclick="clearAll()">Clear</button>
 	</div>
 
-	<textarea id="decodeInput" placeholder="输入需要解码的Base64内容..."></textarea>
+	<textarea id="decodeInput" placeholder="Enter Base64 text to decode..."></textarea>
 
 	<div class="about-base64">
-		<h2>关于Base64编码介绍：</h2>
+		<h2>About Base64</h2>
 		<ul>
-			<li>Base64是一种编码方法，用于在那些只允许使用ASCII字符的媒介中传输二进制数据。</li>
-			<li>Base64编码将二进制数据转换成一种基于64可打印字符的表示形式，这些字符包括大写和小写英文字母、数字以及加号（+）和斜杠（/），等号（=）用于在编码的末尾进行填充。</li>
-			<li>Base64编码广泛应用于多种场景，包括电子邮件协议、网页中嵌入的小图像、网络认证协议等。</li>
-			<li>Base64不是一种加密过程，不提供数据的安全性，任何人都可以使用Base64解码算法来还原原始数据。</li>
+			<li>Base64 encodes binary data for channels that allow ASCII only.</li>
+			<li>It uses 64 printable characters; '=' may be used for padding.</li>
+			<li>Commonly used in emails, small inline images, and auth protocols.</li>
+			<li>Base64 is not encryption and provides no confidentiality.</li>
 		</ul>
 	</div>
 </div>
@@ -306,7 +306,7 @@
 			const decoded = decodeURIComponent(escape(atob(input)));
 			document.getElementById('encodeInput').value = decoded;
 		} catch (error) {
-			alert('解码错误：请输入有效的Base64编码');
+			alert('Decode error: please enter valid Base64');
 		}
 	}
 

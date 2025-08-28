@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Base64与文件互转工具-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>Base64 ⇄ File Converter - Chandao Tools</title>
+	<meta name="keywords" content="online tool collection, Chandao Tools">
+	<meta name="description" content="Chandao Tools is a collection of free, no-login online utilities across life, dev, encoding/decoding, encryption, images, and fun.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -259,49 +259,49 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding</a>
+			<a href="../dev.html" class="nav-category">💻 Dev Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Fun Tools</a>
 		</div>
 	</div>
 </nav>
 
 <div class="container">
 	<div class="header">
-		<h1 class="title">Base64/文件互转</h1>
+		<h1 class="title">Base64 ⇄ File</h1>
 	</div>
 
 	<div class="conversion-area">
 		<div>
-			<h3>文件转Base64</h3>
+			<h3>File to Base64</h3>
 			<div class="upload-box" id="uploadBox"
 				 ondragover="handleDragOver(event)"
 				 ondragleave="handleDragLeave(event)"
 				 ondrop="handleDrop(event)">
 				<div class="upload-icon">↑</div>
-				<p>点击上传，或拖拽到此处</p>
+				<p>Click to choose, or drag a file here</p>
 			</div>
-			<textarea id="base64Output" placeholder="Base64编码将显示在此处..." readonly></textarea>
+			<textarea id="base64Output" placeholder="Base64 output will appear here..." readonly></textarea>
 		</div>
 
 		<div>
-			<h3>Base64转文件</h3>
-			<textarea id="base64Input" placeholder="粘贴Base64编码内容..."></textarea>
-			<button class="download-btn" id="downloadBtn" onclick="convertToFile()">下载文件</button>
+			<h3>Base64 to File</h3>
+			<textarea id="base64Input" placeholder="Paste Base64 content..."></textarea>
+			<button class="download-btn" id="downloadBtn" onclick="convertToFile()">Download file</button>
 		</div>
 	</div>
 
 	<div class="instructions">
-		<h3>关于本工具介绍：</h3>
+		<h3>About this tool:</h3>
 		<ol>
-			<li>本工具可以将<span class="highlight">文件转换为Base64编码格式</span>，安全快捷</li>
-			<li>支持将Base64编码文件<span class="highlight">还原为原始文件</span>并下载</li>
-			<li>转换后的文件<span class="highlight">不会预存</span>，可在本地自行修改后使用</li>
-			<li>本工具完全在<span class="highlight">前端浏览器</span>运行，不保存任何数据</li>
+			<li>Convert a <span class="highlight">file to Base64</span> safely and quickly.</li>
+			<li><span class="highlight">Restore Base64</span> back to the original file and download it.</li>
+			<li>Generated files are <span class="highlight">not stored</span>; you fully control them locally.</li>
+			<li>Runs entirely in your <span class="highlight">browser</span>; no data is saved.</li>
 		</ol>
 	</div>
 </div>
@@ -377,7 +377,7 @@
 			downloadLink.download = `file_${Date.now()}`;
 			downloadLink.click();
 		} catch (error) {
-			alert('无效的Base64编码');
+			alert('Invalid Base64 string');
 		}
 	}
 

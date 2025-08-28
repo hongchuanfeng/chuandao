@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Unicode与中文互转-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>Unicode ⇄ Chinese Converter - Chandao Tools</title>
+	<meta name="keywords" content="online tool collection, Chandao Tools">
+	<meta name="description" content="Chandao Tools is a collection of free, no-login online utilities across life, dev, encoding/decoding, encryption, images, and fun.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -251,44 +251,44 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding</a>
+			<a href="../dev.html" class="nav-category">💻 Dev Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Fun Tools</a>
 		</div>
 	</div>
 </nav>
 <div class="container">
-	<h1>Unicode与中文互转</h1>
+	<h1>Unicode ⇄ Chinese</h1>
 
 	<div class="input-group">
-		<textarea id="chineseInput" placeholder="输入中文内容..."></textarea>
+		<textarea id="chineseInput" placeholder="Enter Chinese text..."></textarea>
 	</div>
 
 	<div class="button-group">
-		<button class="primary-btn" onclick="chineseToUnicode()">中文转Unicode ↓</button>
-		<button class="secondary-btn" onclick="unicodeToChinese()">Unicode转中文 ↑</button>
-		<button class="clear-btn" onclick="clearAll()">清空</button>
+		<button class="primary-btn" onclick="chineseToUnicode()">Chinese → Unicode</button>
+		<button class="secondary-btn" onclick="unicodeToChinese()">Unicode → Chinese</button>
+		<button class="clear-btn" onclick="clearAll()">Clear</button>
 	</div>
 
 	<div class="input-group">
-		<textarea id="unicodeInput" placeholder="输入Unicode内容..."></textarea>
+		<textarea id="unicodeInput" placeholder="Enter Unicode content..."></textarea>
 	</div>
 
 	<div class="error" id="errorMsg"></div>
 
 	<div class="instructions">
-		<h3>关于Unicode介绍：</h3>
+		<h3>About Unicode:</h3>
 		<ol>
-			<li>Unicode是一个字符集标准，旨在为世界上所有的书写系统提供一种统一的编码方案。</li>
-			<li>Unicode 的目标是为每一个字符分配一个唯一的代码点，无论该字符属于哪种语言、符号或表情符号</li>
-			<li>Unicode 使用代码点来表示每个字符，代码点的范围是从U+0000到U+10FFF，可以表示超过1,114,000个不同的字符。</li>
-			<li>代码点通常常用十六进制表示，并加上前缀U+。</li>
-			<li>在编程语言中， Unicode 字符可以通过转义序列来表示。</li>
-			<li>例如，在JavaScript中，可以使用 \uXXXX（其中 XXXX 是代码点上的十六进制值）来表示BMP中的字符。</li>
+			<li>Unicode is a universal character set standard covering global scripts.</li>
+			<li>Each character has a unique code point, regardless of language or symbol.</li>
+			<li>Code points range from U+0000 to U+10FFFF, covering 1,114,112 possible values.</li>
+			<li>Usually written in hexadecimal with the U+ prefix.</li>
+			<li>Programming languages use escape sequences to represent Unicode.</li>
+			<li>Example: in JavaScript, use \uXXXX for BMP characters.</li>
 		</ol>
 	</div>
 </div>
@@ -304,7 +304,7 @@
 			document.getElementById('unicodeInput').value = unicodeArray.join('');
 			showError('');
 		} catch (error) {
-			showError('转换失败：' + error.message);
+			showError('Conversion failed: ' + error.message);
 		}
 	}
 
@@ -313,7 +313,7 @@
 		try {
 			const input = document.getElementById('unicodeInput').value;
 			if (!/^(\\u[\da-fA-F]{4})+$/.test(input)) {
-				throw new Error('无效的Unicode格式');
+				throw new Error('Invalid Unicode format');
 			}
 
 			const decoded = input.replace(/\\u([\da-fA-F]{4})/g, (match, grp) =>
@@ -322,18 +322,18 @@
 			document.getElementById('chineseInput').value = decoded;
 			showError('');
 		} catch (error) {
-			showError('转换失败：' + error.message);
+			showError('Conversion failed: ' + error.message);
 		}
 	}
 
-	// 清空功能
+	// Clear
 	function clearAll() {
 		document.getElementById('chineseInput').value = '';
 		document.getElementById('unicodeInput').value = '';
 		showError('');
 	}
 
-	// 错误提示
+	// Error message
 	function showError(message) {
 		const errorElem = document.getElementById('errorMsg');
 		errorElem.textContent = message;

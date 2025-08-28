@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Unicode与ASCII转换工具-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>Unicode ⇄ ASCII Converter - Chandao Tools</title>
+	<meta name="keywords" content="online tool collection, Chandao Tools">
+	<meta name="description" content="Chandao Tools is a collection of free, no-login online utilities across life, dev, encoding/decoding, encryption, images, and fun.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -258,44 +258,44 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding</a>
+			<a href="../dev.html" class="nav-category">💻 Dev Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Fun Tools</a>
 		</div>
 	</div>
 </nav>
 <div class="container">
 	<div class="header">
-		<h1 class="title">Unicode/ASCII转换</h1>
+		<h1 class="title">Unicode ⇄ ASCII</h1>
 	</div>
 
 	<div class="input-group">
-		<textarea id="unicodeInput" placeholder="输入Unicode编码的内容..."></textarea>
+		<textarea id="unicodeInput" placeholder="Enter Unicode text..."></textarea>
 	</div>
 
 	<div class="button-group">
-		<button class="primary-btn" onclick="unicodeToAscii()">Unicode转ASCII ↓</button>
-		<button class="secondary-btn" onclick="asciiToUnicode()">ASCII转Unicode ↑</button>
-		<button class="clear-btn" onclick="clearAll()">清空</button>
+		<button class="primary-btn" onclick="unicodeToAscii()">Unicode → ASCII</button>
+		<button class="secondary-btn" onclick="asciiToUnicode()">ASCII → Unicode</button>
+		<button class="clear-btn" onclick="clearAll()">Clear</button>
 	</div>
 
 	<div class="input-group">
-		<textarea id="asciiInput" placeholder="输入ASCII编码的内容..."></textarea>
+		<textarea id="asciiInput" placeholder="Enter ASCII codes (comma or space-separated)..."></textarea>
 	</div>
 
 	<div class="error" id="errorMsg"></div>
 
 	<div class="instructions">
-		<h3>关于Unicode介绍：</h3>
+		<h3>About Unicode:</h3>
 		<ol>
-			<li>Unicode 是一个字符集成，旨在为世界上所有的书写系统提供一种统一的编码方案</li>
-			<li>Unicode 的目标是为每一个字符分配一个唯一的代码点，无论该字符属于哪种语言、符号或表情符号</li>
-			<li>ASCII是一种用于电子通信的字符编码标准</li>
-			<li>ASCII 编码使用7位或8位二进制数来表示128或256个不同的字符</li>
+			<li>Unicode is a character set covering virtually all writing systems.</li>
+			<li>Each character is assigned a unique code point.</li>
+			<li>ASCII is a character encoding standard for electronic communication.</li>
+			<li>ASCII uses 7 or 8 bits to represent 128 or 256 characters.</li>
 		</ol>
 	</div>
 </div>
@@ -307,13 +307,13 @@
 			const input = document.getElementById('unicodeInput').value;
 			const asciiCodes = Array.from(input).map(char => {
 				const code = char.charCodeAt(0);
-				if (code > 255) throw new Error('包含非ASCII字符');
+				if (code > 255) throw new Error('Contains non-ASCII characters');
 				return code;
 			});
 			document.getElementById('asciiInput').value = asciiCodes.join(', ');
 			showError('');
 		} catch (error) {
-			showError('转换失败：' + error.message);
+			showError('Conversion failed: ' + error.message);
 		}
 	}
 
@@ -322,28 +322,28 @@
 		try {
 			const input = document.getElementById('asciiInput').value;
 			const codes = input.split(/[,\s]+/).map(Number);
-			if (codes.some(isNaN)) throw new Error('包含无效数字');
+			if (codes.some(isNaN)) throw new Error('Contains invalid numbers');
 
 			const chars = codes.map(code => {
-				if (code < 0 || code > 255) throw new Error('超出ASCII范围(0-255)');
+				if (code < 0 || code > 255) throw new Error('Out of ASCII range (0-255)');
 				return String.fromCharCode(code);
 			});
 
 			document.getElementById('unicodeInput').value = chars.join('');
 			showError('');
 		} catch (error) {
-			showError('转换失败：' + error.message);
+			showError('Conversion failed: ' + error.message);
 		}
 	}
 
-	// 清空功能
+	// Clear
 	function clearAll() {
 		document.getElementById('unicodeInput').value = '';
 		document.getElementById('asciiInput').value = '';
 		showError('');
 	}
 
-	// 错误提示
+	// Error message
 	function showError(message) {
 		const errorElem = document.getElementById('errorMsg');
 		errorElem.textContent = message;
