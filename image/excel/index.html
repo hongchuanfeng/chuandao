@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>图片转Excel工具-传道软件</title>
-    <meta name="keywords" content="在线软件工具集合、传道软件">
-    <meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+    <title>Image to Excel Tool - Chandao Tools</title>
+    <meta name="keywords" content="online tool collection, Chandao Tools">
+    <meta name="description" content="Chandao Tools is a collection of free, no-login online utilities across life, dev, encoding/decoding, encryption, images, and fun.">
     <link rel="canonical" href="https://chdaoai.com/">
     <link rel="icon" href="../../favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon"/>
@@ -263,20 +263,20 @@
         </div>
         <button class="menu-btn" onclick="toggleMenu()">☰</button>
         <div class="nav-categories">
-            <a href="../../index.html" class="nav-category">🔍 推荐工具</a>
-            <a href="../../life.html" class="nav-category">🏠 生活工具</a>
-            <a href="../../encry.html" class="nav-category">🔒 加密解密</a>
-            <a href="../../code.html" class="nav-category">📝 编码解码</a>
-            <a href="../../dev.html" class="nav-category">💻 开发工具</a>
-            <a href="../../image.html" class="nav-category">🖼️ 图片处理</a>
-            <a href="../../game.html" class="nav-category">🎮 娱乐工具</a>
+            <a href="../../index.html" class="nav-category">🔍 Recommended</a>
+            <a href="../../life.html" class="nav-category">🏠 Life Tools</a>
+            <a href="../../encry.html" class="nav-category">🔒 Encryption</a>
+            <a href="../../code.html" class="nav-category">📝 Encoding</a>
+            <a href="../../dev.html" class="nav-category">💻 Dev Tools</a>
+            <a href="../../image.html" class="nav-category">🖼️ Image Tools</a>
+            <a href="../../game.html" class="nav-category">🎮 Fun Tools</a>
         </div>
     </div>
 </nav>
 
-<h1 style="text-align: center">图片转Excel</h1>
+<h1 style="text-align: center">Image to Excel</h1>
 <div class="container">
-    <p class="text-center mb-4" style="line-height: 1.6; color: mediumvioletred; ">将您的图片转换成Excel艺术作品，支持亮度、对比度等调整，轻松创作像素风格表格艺术</p>
+    <p class="text-center mb-4" style="line-height: 1.6; color: mediumvioletred; ">Convert images into Excel art. Adjust brightness, contrast, and more to create pixel-style spreadsheets.</p>
     <div class="row">
         <div class="col-md-4">
             <div class="card p-4 mb-4">
@@ -288,41 +288,41 @@
                             <polyline points="17 8 12 3 7 8"></polyline>
                             <line x1="12" y1="3" x2="12" y2="15"></line>
                         </svg>
-                        <p class="mb-0">点击或拖拽图片到这里</p>
+                        <p class="mb-0">Click or drag an image here</p>
                     </div>
                 </div>
 
                 <div class="settings card mt-4" id="settings">
                     <div class="card-body">
                         <div class="settings-group mb-4">
-                            <h3 class="h5 mb-3">图片设置</h3>
+                            <h3 class="h5 mb-3">Image Settings</h3>
                             <div class="mb-3">
-                                <label class="form-label">最大像素数:</label>
+                                <label class="form-label">Max pixels:</label>
                                 <input type="number" id="maxSize" value="50" min="10" max="200" class="form-control">
                             </div>
                             <div class="mb-3">
-                                <label class="form-label">亮度调整:</label>
+                                <label class="form-label">Brightness:</label>
                                 <div class="d-flex align-items-center">
                                     <input type="range" id="brightness" min="-100" max="100" value="0" class="form-range flex-grow-1">
                                     <span class="range-value ms-2">0</span>
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label class="form-label">对比度:</label>
+                                <label class="form-label">Contrast:</label>
                                 <div class="d-flex align-items-center">
                                     <input type="range" id="contrast" min="-100" max="100" value="0" class="form-range flex-grow-1">
                                     <span class="range-value ms-2">0</span>
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label class="form-label">饱和度:</label>
+                                <label class="form-label">Saturation:</label>
                                 <div class="d-flex align-items-center">
                                     <input type="range" id="saturation" min="-100" max="100" value="0" class="form-range flex-grow-1">
                                     <span class="range-value ms-2">0</span>
                                 </div>
                             </div>
                             <div class="mb-3">
-                                <label class="form-label">色调:</label>
+                                <label class="form-label">Hue:</label>
                                 <div class="d-flex align-items-center">
                                     <input type="range" id="hue" min="-180" max="180" value="0" class="form-range flex-grow-1">
                                     <span class="range-value ms-2">0</span>
@@ -331,29 +331,29 @@
                         </div>
 
                         <div class="settings-group">
-                            <h3 class="h5 mb-3">Excel设置</h3>
+                            <h3 class="h5 mb-3">Excel Settings</h3>
                             <div class="mb-3">
-                                <label class="form-label">单元格大小:</label>
+                                <label class="form-label">Cell size:</label>
                                 <input type="number" id="cellSize" value="40" min="20" max="100" class="form-control">
                             </div>
                             <div class="mb-3">
-                                <label class="form-label">工作表背景色:</label>
+                                <label class="form-label">Sheet background:</label>
                                 <input type="color" id="sheetBackground" value="#FFFFFF" class="form-control form-control-color">
                             </div>
                             <div class="mb-3">
-                                <label class="form-label">单元格边框:</label>
+                                <label class="form-label">Cell border:</label>
                                 <select id="borderStyle" class="form-select">
-                                    <option value="none">无边框</option>
-                                    <option value="thin">细边��</option>
-                                    <option value="medium">中等边框</option>
+                                    <option value="none">None</option>
+                                    <option value="thin">Thin</option>
+                                    <option value="medium">Medium</option>
                                 </select>
                             </div>
                             <div class="mb-3">
-                                <label class="form-label">边框颜色:</label>
+                                <label class="form-label">Border color:</label>
                                 <input type="color" id="borderColor" value="#000000" class="form-control form-control-color">
                             </div>
                             <div class="mb-3">
-                                <label class="form-label">缩放比例:</label>
+                                <label class="form-label">Zoom:</label>
                                 <select id="zoomScale" class="form-select">
                                     <option value="50">50%</option>
                                     <option value="75">75%</option>
@@ -374,8 +374,8 @@
                 <div class="pixel-preview">
                     <div id="pixelGrid" class="pixel-grid"></div>
                 </div>
-                <button class="btn btn-primary w-100" id="generateButton">生成Excel文件</button>
-                <div id="loading" class="loading text-muted mt-3">正在生成Excel文件，请稍候...</div>
+                <button class="btn btn-primary w-100" id="generateButton">Generate Excel file</button>
+                <div id="loading" class="loading text-muted mt-3">Generating Excel file, please wait...</div>
             </div>
         </div>
     </div>
