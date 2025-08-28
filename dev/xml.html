@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>XML压缩与格式化工具-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>XML Minify & Format Tool - Chandao Tools</title>
+	<meta name="keywords" content="online tool collection, Chandao Tools">
+	<meta name="description" content="Chandao Tools is a collection of free, no-login online utilities across life, dev, encoding/decoding, encryption, images, and fun.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -241,19 +241,19 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding</a>
+			<a href="../dev.html" class="nav-category">💻 Dev Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Fun Tools</a>
 		</div>
 	</div>
 </nav>
 
 <div class="container">
-	<h1>XML压缩/格式化工具</h1>
+	<h1>XML Minify / Format</h1>
 
 	<textarea id="xmlEditor"><sites>
   <site>
@@ -267,24 +267,24 @@
 </sites></textarea>
 
 	<div class="toolbar">
-		<button onclick="compressXML()">压缩</button>
-		<button onclick="formatXML()">解压/格式化</button>
+		<button onclick="compressXML()">Minify</button>
+		<button onclick="formatXML()">Format</button>
 		<select id="indentSelect">
-			<option value="2">2个空格缩进</option>
-			<option value="4" selected>4个空格缩进</option>
+			<option value="2">Indent: 2 spaces</option>
+			<option value="4" selected>Indent: 4 spaces</option>
 		</select>
-		<button onclick="uploadXML()">上传</button>
-		<button onclick="copyXML()">复制</button>
-		<button onclick="clearEditor()">清空</button>
+		<button onclick="uploadXML()">Upload</button>
+		<button onclick="copyXML()">Copy</button>
+		<button onclick="clearEditor()">Clear</button>
 	</div>
 
 	<div class="about-section">
-		<h3>关于XML压缩/格式化工具介绍：</h3>
+		<h3>About this tool:</h3>
 		<ul>
-			<li>此工具可以将XML代码进行压缩或格式化</li>
-			<li>XML格式化时，可以设置缩进的方式（通过下拉菜单选择）</li>
-			<li>支持本地XML文件上传操作</li>
-			<li>所有操作均在浏览器本地完成，数据不会上传至服务器</li>
+			<li>Minify or format XML quickly.</li>
+			<li>Choose indentation via the dropdown.</li>
+			<li>Supports local XML file upload.</li>
+			<li>Runs in-browser; no data is uploaded.</li>
 		</ul>
 	</div>
 </div>
@@ -299,7 +299,7 @@
 			const formatted = format(xmlString, indentSize);
 			document.getElementById('xmlEditor').value = formatted;
 		} catch (error) {
-			alert('XML格式错误：' + error.message);
+			alert('Invalid XML: ' + error.message);
 		}
 	}
 
@@ -338,7 +338,7 @@
 		const editor = document.getElementById('xmlEditor');
 		editor.select();
 		document.execCommand('copy');
-		alert('内容已复制到剪贴板');
+		alert('Copied to clipboard');
 	}
 
 	// 清空编辑器

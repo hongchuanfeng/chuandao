@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>XML与JSON相互转换-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>XML ⇄ JSON Converter - Chandao Tools</title>
+	<meta name="keywords" content="online tool collection, Chandao Tools">
+	<meta name="description" content="Chandao Tools is a collection of free, no-login online utilities across life, dev, encoding/decoding, encryption, images, and fun.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -182,17 +182,17 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding</a>
+			<a href="../dev.html" class="nav-category">💻 Dev Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Fun Tools</a>
 		</div>
 	</div>
 </nav>
-<h1 class="search-title" style="text-align: center">XML与JSON相互转换</h1>
+<h1 class="search-title" style="text-align: center">XML ⇄ JSON Converter</h1>
 <div class="container">
 	<div class="panel">
 		<h3>XML</h3>
@@ -221,17 +221,17 @@
 <div class="error" id="error"></div>
 
 <script>
-	// 通用XML转JSON方法
+	// Generic XML to JSON
 	function xmlToJson(xmlNode) {
 		const result = {};
 
-		// 处理子节点
+		// Handle child nodes
 		if (xmlNode.children.length > 0) {
 			[...xmlNode.children].forEach(child => {
 				const childName = child.nodeName;
 				const childData = xmlToJson(child);
 
-				// 自动检测数组
+				// Auto-detect arrays
 				if (result[childName]) {
 					if (!Array.isArray(result[childName])) {
 						result[childName] = [result[childName]];
@@ -243,7 +243,7 @@
 			});
 		}
 
-		// 处理文本内容
+		// Handle text content
 		const textContent = xmlNode.textContent.trim();
 		if (textContent && !Object.keys(result).length) {
 			return textContent;
@@ -252,7 +252,7 @@
 		return Object.keys(result).length ? result : textContent;
 	}
 
-	// XML转JSON
+	// Convert XML to JSON
 	function convertXmlToJson() {
 		try {
 			const xmlString = $('#xmlInput').val().trim();
@@ -262,11 +262,11 @@
 			$('#jsonInput').val(JSON.stringify(jsonResult, null, 4));
 			$('#error').text('');
 		} catch (err) {
-			$('#error').text('XML转换错误: ' + err.message);
+			$('#error').text('XML conversion error: ' + err.message);
 		}
 	}
 
-	// 通用JSON转XML方法
+	// Generic JSON to XML
 	function jsonToXml(nodeName, data) {
 		let xml = '';
 
@@ -285,7 +285,7 @@
 		return xml;
 	}
 
-	// JSON转XML
+	// Convert JSON to XML
 	function convertJsonToXml() {
 		try {
 			const jsonData = JSON.parse($('#jsonInput').val());
@@ -293,11 +293,11 @@
 			$('#xmlInput').val(formatXml(xmlContent));
 			$('#error').text('');
 		} catch (err) {
-			$('#error').text('JSON转换错误: ' + err.message);
+			$('#error').text('JSON conversion error: ' + err.message);
 		}
 	}
 
-	// XML格式化
+	// XML pretty format
 	function formatXml(xml) {
 		let formatted = '';
 		let indent = '';
@@ -309,7 +309,7 @@
 		return formatted.substring(1, formatted.length - 3);
 	}
 
-	// XML特殊字符转义
+	// Escape special XML characters
 	function escapeXml(unsafe) {
 		return unsafe.replace(/[&<>'"]/g, c => ({
 			'&': '&amp;', '<': '&lt;', '>': '&gt;',

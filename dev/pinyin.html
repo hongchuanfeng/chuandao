@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>汉字拼音在线转换-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>Chinese Pinyin Converter - Chandao Tools</title>
+	<meta name="keywords" content="online tool collection, Chandao Tools">
+	<meta name="description" content="Chandao Tools is a collection of free, no-login online utilities across life, dev, encoding/decoding, encryption, images, and fun.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -257,55 +257,55 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding</a>
+			<a href="../dev.html" class="nav-category">💻 Dev Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Fun Tools</a>
 		</div>
 	</div>
 </nav>
 <div class="container">
 	<div class="header">
-		<h1>汉字拼音在线转换</h1>
+		<h1>Chinese Pinyin Converter</h1>
 	</div>
 
-	<textarea id="inputArea" placeholder="请输入要转为拼音的内容"></textarea>
+	<textarea id="inputArea" placeholder="Enter Chinese text to convert to Pinyin"></textarea>
 
 	<div class="options-group">
 		<div class="option-item">
-			<h3>生成选项</h3>
-			<label><input type="checkbox" id="keepPunctuation"> 保留标点符号</label><br>
-			<label><input type="checkbox" id="keepLetters"> 保留字母</label><br>
-			<label><input type="checkbox" id="addSpaces"> 空格隔开</label>
+			<h3>Options</h3>
+			<label><input type="checkbox" id="keepPunctuation"> Keep punctuation</label><br>
+			<label><input type="checkbox" id="keepLetters"> Keep letters</label><br>
+			<label><input type="checkbox" id="addSpaces"> Separate with spaces</label>
 		</div>
 
 		<div class="option-item">
-			<h3>生成模式</h3>
+			<h3>Mode</h3>
 			<label>
-				<input type="radio" name="position" value="above" checked> 拼音在汉字上
+				<input type="radio" name="position" value="above" checked> Pinyin above characters
 			</label><br>
 			<label>
-				<input type="radio" name="position" value="beside"> 拼音在汉字旁
+				<input type="radio" name="position" value="beside"> Pinyin beside characters
 			</label>
 			<div class="switch">
-				音标：<label><input type="checkbox" id="toneMarks"> 开启</label>
+				Tone marks: <label><input type="checkbox" id="toneMarks"> On</label>
 			</div>
 		</div>
 	</div>
 
-	<button class="con-btn" onclick="convertToPinyin()">开启转换</button>
+	<button class="con-btn" onclick="convertToPinyin()">Convert</button>
 
 	<div class="pinyin-result" id="resultArea"></div>
 
 	<div class="instructions">
-		<h3>关于汉字拼音工具介绍：</h3>
+		<h3>About this tool:</h3>
 		<ol>
-			<li>此工具可以一键生成汉字的拼音，并带有音标</li>
-			<li>你可以设置拼音所在的位置，以及是否开启音标</li>
-			<li>小提示：拼音生成后，要仔细检查是否正确</li>
+			<li>Generate Pinyin (with tone marks) from Chinese text.</li>
+			<li>Choose Pinyin position and whether to include tone marks.</li>
+			<li>Tip: Review generated Pinyin for correctness.</li>
 		</ol>
 	</div>
 

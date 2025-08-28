@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>数据大小转换工具-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>Data Size Converter - Chandao Tools</title>
+	<meta name="keywords" content="online tool collection, Chandao Tools">
+	<meta name="description" content="Chandao Tools is a collection of free, no-login online utilities across life, dev, encoding/decoding, encryption, images, and fun.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -240,67 +240,67 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding</a>
+			<a href="../dev.html" class="nav-category">💻 Dev Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Fun Tools</a>
 		</div>
 	</div>
 </nav>
 <div class="container">
 	<div class="header">
-		<h1>数据大小转换</h1>
+		<h1>Data Size Converter</h1>
 	</div>
 
 	<div class="converter">
 		<div class="input-group">
 			<input type="number" id="inputValue" value="1" step="any">
 			<select id="unit">
-				<option value="0">比特 (bit)</option>
-				<option value="1">字节 (Bytes)</option>
-				<option value="2">千字节 (KB)</option>
-				<option value="3">兆字节 (MB)</option>
-				<option value="4">千兆字节 (GB)</option>
-				<option value="5">太字节 (TB)</option>
+				<option value="0">bit</option>
+				<option value="1">Byte</option>
+				<option value="2">Kilobyte (KB)</option>
+				<option value="3">Megabyte (MB)</option>
+				<option value="4">Gigabyte (GB)</option>
+				<option value="5">Terabyte (TB)</option>
 			</select>
-			<button class="con-btn" onclick="convert()">换算</button>
+			<button class="con-btn" onclick="convert()">Convert</button>
 		</div>
 
 		<div class="result-list" id="result">
-			<h3>换算结果：</h3>
-			<div>1 比特 (bit) 等于：</div>
+			<h3>Converted results:</h3>
+			<div>1 bit equals:</div>
 		</div>
 
 		<div class="unit-definition">
-			<h3>数据存储单位介绍：</h3>
+			<h3>About data storage units:</h3>
 			<ol>
-				<li>位（bit）：最小的数据单位，表示二进制中的0或1</li>
-				<li>字节（Byte）：基本的数据单位，1 Byte = 8 bits</li>
-				<li>千字节（KB）：1 KB = 2<sup>10</sup> Bytes = 1,024 Bytes</li>
-				<li>兆字节（MB）：1 MB = 2<sup>20</sup> Bytes = 1,048,576 Bytes</li>
-				<li>吉字节（GB）：1 GB = 2<sup>30</sup> Bytes = 1,073,741,824 Bytes</li>
-				<li>太字节（TB）：1 TB = 2<sup>40</sup> Bytes = 1,099,511,627,776 Bytes</li>
-				<li>拍字节（PB）：1 PB = 2<sup>50</sup> Bytes = 1,125,899,906,842,624 Bytes</li>
-				<li>艾字节（EB）：1 EB = 2<sup>60</sup> Bytes = 1,152,921,504,606,846,976 Bytes</li>
-				<li>泽字节（ZB）：1 ZB = 2<sup>70</sup> Bytes = 1,180,591,620,717,411,303,424 Bytes</li>
+				<li>bit: the smallest data unit representing 0 or 1</li>
+				<li>Byte: 1 Byte = 8 bits</li>
+				<li>KB: 1 KB = 2<sup>10</sup> Bytes = 1,024 Bytes</li>
+				<li>MB: 1 MB = 2<sup>20</sup> Bytes = 1,048,576 Bytes</li>
+				<li>GB: 1 GB = 2<sup>30</sup> Bytes = 1,073,741,824 Bytes</li>
+				<li>TB: 1 TB = 2<sup>40</sup> Bytes = 1,099,511,627,776 Bytes</li>
+				<li>PB: 1 PB = 2<sup>50</sup> Bytes</li>
+				<li>EB: 1 EB = 2<sup>60</sup> Bytes</li>
+				<li>ZB: 1 ZB = 2<sup>70</sup> Bytes</li>
 			</ol>
 		</div>
 	</div>
 
 	<script>
 		const units = [
-			{ name: "比特 (bit)", factor: 1 },
-			{ name: "字节 (Bytes)", factor: 1/8 },
-			{ name: "千字节 (KB)", factor: 1/(8 * 1024) },
-			{ name: "兆字节 (MB)", factor: 1/(8 * Math.pow(1024, 2)) },
-		{ name: "千兆字节 (GB)", factor: 1/(8 * Math.pow(1024, 3))},
-		{ name: "太字节 (TB)", factor: 1/(8 * Math.pow(1024, 4)) },
-		{ name: "拍字节 (PB)", factor: 1/(8 * Math.pow(1024, 5)) },
-		{ name: "艾字节 (EB)", factor: 1/(8 * Math.pow(1024, 6)) },
-		{ name: "泽字节 (ZB)", factor: 1/(8 * Math.pow(1024, 7)) }
+			{ name: "bit", factor: 1 },
+			{ name: "Byte", factor: 1/8 },
+			{ name: "Kilobyte (KB)", factor: 1/(8 * 1024) },
+			{ name: "Megabyte (MB)", factor: 1/(8 * Math.pow(1024, 2)) },
+		{ name: "Gigabyte (GB)", factor: 1/(8 * Math.pow(1024, 3))},
+		{ name: "Terabyte (TB)", factor: 1/(8 * Math.pow(1024, 4)) },
+		{ name: "Petabyte (PB)", factor: 1/(8 * Math.pow(1024, 5)) },
+		{ name: "Exabyte (EB)", factor: 1/(8 * Math.pow(1024, 6)) },
+		{ name: "Zettabyte (ZB)", factor: 1/(8 * Math.pow(1024, 7)) }
 		];
 
 		function convert() {
@@ -308,8 +308,8 @@
 			const selectedUnit = parseInt(document.getElementById('unit').value);
 			const bits = input / units[selectedUnit].factor;
 
-			let resultHTML = `<h3>换算结果：</h3>
-                            <div>${input} ${units[selectedUnit].name} 等于：</div>`;
+			let resultHTML = `<h3>Converted results:</h3>
+                            <div>${input} ${units[selectedUnit].name} equals:</div>`;
 
 			units.forEach(unit => {
 				const value = (bits * unit.factor).toExponential(5);

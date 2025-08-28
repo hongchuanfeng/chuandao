@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>JSON压缩与格式化工具-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>JSON Minify and Format Tool - Chuandao Tools</title>
+	<meta name="keywords" content="JSON formatter, JSON minify, Chuandao Tools">
+	<meta name="description" content="Minify or pretty-print JSON, validate syntax, escape/unescape, copy and clear. All operations run locally in your browser.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -103,7 +103,7 @@
 			background-color: #f5f5f5;
 		}
 
-		/* 响应式导航栏 */
+		/* Responsive navigation bar */
 		nav {
 			background: white;
 			padding: 1rem 2rem;
@@ -148,7 +148,7 @@
 			padding: 0 1rem;
 		}
 
-		/* 工具卡片布局 */
+		/* Tool card layout */
 		.tools-grid {
 			display: grid;
 			grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -180,7 +180,7 @@
 			padding-left: 1rem;
 		}
 
-		/* 移动端样式 */
+		/* Mobile styles */
 		@media (max-width: 768px) {
 			.nav-categories {
 				display: none;
@@ -237,18 +237,18 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Featured</a>
+			<a href="../life.html" class="nav-category">🏠 Life</a>
+			<a href="../encry.html" class="nav-category">🔒 Crypto</a>
+			<a href="../code.html" class="nav-category">📝 Encode/Decode</a>
+			<a href="../dev.html" class="nav-category">💻 Developer</a>
+			<a href="../image.html" class="nav-category">🖼️ Image</a>
+			<a href="../game.html" class="nav-category">🎮 Fun</a>
 		</div>
 	</div>
 </nav>
 <div class="container">
-	<h1>JSON压缩/格式化工具</h1>
+	<h1>JSON Minify/Format Tool</h1>
 
 	<textarea id="jsonEditor">{
   "sites": {
@@ -266,21 +266,21 @@
 }</textarea>
 
 	<div class="toolbar">
-		<button onclick="formatJSON()">解压/格式化</button>
-		<button onclick="compressJSON()">压缩</button>
-		<button onclick="escapeJSON()">转义</button>
-		<button onclick="unescapeJSON()">取消转义</button>
-		<button onclick="copyJSON()">复制</button>
-		<button onclick="clearJSON()">清空</button>
+		<button onclick="formatJSON()">Format</button>
+		<button onclick="compressJSON()">Minify</button>
+		<button onclick="escapeJSON()">Escape</button>
+		<button onclick="unescapeJSON()">Unescape</button>
+		<button onclick="copyJSON()">Copy</button>
+		<button onclick="clearJSON()">Clear</button>
 	</div>
 
 	<div class="about">
-		<h3>关于JSON压缩/格式化工具介绍：</h3>
+		<h3>About this JSON tool</h3>
 		<ul>
-			<li>此工具可以将JSON脚本代码进行压缩或格式化</li>
-			<li>带有JSON语法验证功能，错误时会提示具体位置</li>
-			<li>支持转义/取消转义特殊字符</li>
-			<li>所有操作均在本地完成，保障数据安全</li>
+			<li>Minify or pretty-print JSON content</li>
+			<li>Validates JSON syntax and shows error position</li>
+			<li>Supports escaping/unescaping special characters</li>
+			<li>All operations run locally to protect your data</li>
 		</ul>
 	</div>
 </div>
@@ -333,7 +333,7 @@
 		const editor = document.getElementById('jsonEditor');
 		editor.select();
 		document.execCommand('copy');
-		alert('内容已复制到剪贴板');
+		alert('Copied to clipboard');
 	}
 
 	// 清空编辑器
@@ -343,7 +343,7 @@
 
 	// 错误处理
 	function showError(error) {
-		const message = `JSON语法错误：${error.message}\n第 ${getErrorPosition()} 行`;
+		const message = `JSON syntax error: ${error.message}\nLine ${getErrorPosition()}`;
 		alert(message);
 	}
 

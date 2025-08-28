@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>在线字数统计-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>Online Text Counter - Chandao Tools</title>
+	<meta name="keywords" content="online tool collection, Chandao Tools">
+	<meta name="description" content="Chandao Tools is a collection of free, no-login online utilities across life, dev, encoding/decoding, encryption, images, and fun.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -246,42 +246,42 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding</a>
+			<a href="../dev.html" class="nav-category">💻 Dev Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Fun Tools</a>
 		</div>
 	</div>
 </nav>
 <div class="container">
 	<div class="header">
-		<h1>在线字数统计</h1>
+		<h1>Online Text Counter</h1>
 	</div>
 
-	<textarea id="inputArea" placeholder="输入要统计字数的内容...."></textarea>
+	<textarea id="inputArea" placeholder="Enter text to analyze..."></textarea>
 
 	<div class="button-group">
-		<button class="count-btn" onclick="countCharacters()">开始统计</button>
-		<button class="count-btn clear-btn" onclick="clearAll()">清空</button>
+		<button class="count-btn" onclick="countCharacters()">Count</button>
+		<button class="count-btn clear-btn" onclick="clearAll()">Clear</button>
 	</div>
 
 	<div class="result-area">
-		<div class="result-item">数字个数：<span id="numberCount">0</span></div>
-		<div class="result-item">字符个数：<span id="strCount">0</span></div>
-		<div class="result-item">汉字个数：<span id="chineseCount">0</span></div>
-		<div class="result-item">标点符号：<span id="punctuationCount">0</span></div>
-		<div class="result-item">总数量：<span id="totalCount">0</span></div>
+		<div class="result-item">Digits: <span id="numberCount">0</span></div>
+		<div class="result-item">Letters (a-z): <span id="strCount">0</span></div>
+		<div class="result-item">Chinese chars: <span id="chineseCount">0</span></div>
+		<div class="result-item">Punctuation: <span id="punctuationCount">0</span></div>
+		<div class="result-item">Total: <span id="totalCount">0</span></div>
 	</div>
 
 	<div class="instructions">
-		<h3>关于此工具介绍：</h3>
+		<h3>About this tool:</h3>
 		<ol>
-			<li>此工具可以统计文本内容中的数字个数，汉字个数以及标点符号等个数</li>
-			<li>在工具输入框中输入要统计的文本内容</li>
-			<li>点击"开始统计"即可开始处理</li>
+			<li>Count digits, Latin letters, Chinese characters, and punctuation.</li>
+			<li>Paste or type text into the input box.</li>
+			<li>Click "Count" to analyze the text.</li>
 		</ol>
 	</div>
 
@@ -289,20 +289,20 @@
 		function countCharacters() {
 			const text = document.getElementById('inputArea').value;
 
-			// 统计数字（0-9）
+			// Count digits (0-9)
 			const numberCount = (text.match(/[0-9]/g) || []).length;
 
 
-			// 统计数字（0-9）
+			// Count letters (a-z)
 			const strCount = (text.match(/[a-z]/g) || []).length;
 
-			// 统计汉字（Unicode范围）
+			// Count Chinese characters (Unicode range)
 			const chineseCount = (text.match(/[\u4e00-\u9fa5]/g) || []).length;
 
-			// 统计标点符号（常见中文标点）
+			// Count punctuation (common Chinese punctuation)
 			const punctuationCount = (text.match(/[，。？！；：“”‘’《》【】、]/g) || []).length;
 
-			// 更新统计结果
+			// Update results
 			document.getElementById('numberCount').textContent = numberCount;
 			document.getElementById('strCount').textContent = strCount;
 			document.getElementById('chineseCount').textContent = chineseCount;

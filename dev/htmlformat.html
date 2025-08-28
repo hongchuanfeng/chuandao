@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>HTML压缩与格式化工具-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>HTML Minify & Format Tool - Chandao Tools</title>
+	<meta name="keywords" content="online tool collection, Chandao Tools">
+	<meta name="description" content="Chandao Tools is a collection of free, no-login online utilities across life, dev, encoding/decoding, encryption, images, and fun.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -235,18 +235,18 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding</a>
+			<a href="../dev.html" class="nav-category">💻 Dev Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Fun Tools</a>
 		</div>
 	</div>
 </nav>
 <div class="container">
-	<h2 style="text-align: center">HTML压缩/格式化</h2>
+	<h2 style="text-align: center">HTML Minify / Format</h2>
 
 	<div class="editor-wrapper">
 		<div class="line-numbers" id="lineNumbers">1<br>2<br>3<br>4<br>5<br>6<br>7<br>8<br>9<br>10<br>11</div>
@@ -264,21 +264,21 @@
 	</div>
 
 	<div class="button-group">
-		<button onclick="compressHTML()">压缩</button>
-		<button onclick="formatHTML()">解压/格式化</button>
-		<button onclick="setIndent(4)">4个空格缩进</button>
-		<button onclick="uploadHTML()">上传</button>
-		<button onclick="copyHTML()">复制</button>
-		<button onclick="clearEditor()">清空</button>
+		<button onclick="compressHTML()">Minify</button>
+		<button onclick="formatHTML()">Format</button>
+		<button onclick="setIndent(4)">Indent: 4 spaces</button>
+		<button onclick="uploadHTML()">Upload</button>
+		<button onclick="copyHTML()">Copy</button>
+		<button onclick="clearEditor()">Clear</button>
 	</div>
 
 	<div class="instructions">
-		<h3>关于HTML压缩/格式化工具介绍：</h3>
+		<h3>About this tool:</h3>
 		<ol>
-			<li>此工具可以将HTML网页代码进行压缩或格式化</li>
-			<li>HTML格式化时，可以设置缩进的方式，比如2个空格缩进等</li>
-			<li>可以通过"上传"功能，将HTML文件内容上传至工具进行操作</li>
-			<li>注：此工具的计算在前台进行，你上传的文件不会上传至服务器，请放心使用</li>
+			<li>Minify or format HTML instantly.</li>
+			<li>Choose indentation style (e.g., 2 or 4 spaces).</li>
+			<li>Use "Upload" to process a local HTML file.</li>
+			<li>Runs in-browser; no files are uploaded to a server.</li>
 		</ol>
 	</div>
 
@@ -348,8 +348,8 @@
 		// 复制内容
 		function copyHTML() {
 			navigator.clipboard.writeText(editor.value)
-					.then(() => alert('已复制到剪贴板'))
-					.catch(() => alert('复制失败'));
+					.then(() => alert('Copied to clipboard'))
+					.catch(() => alert('Copy failed'));
 		}
 
 		// 清空编辑器

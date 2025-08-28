@@ -3,9 +3,9 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>文本与二进制转换工具-传道软件</title>
-	<meta name="keywords" content="在线软件工具集合、传道软件">
-	<meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+	<title>Text ⇄ Binary Converter - Chandao Tools</title>
+	<meta name="keywords" content="online tool collection, Chandao Tools">
+	<meta name="description" content="Chandao Tools is a collection of free, no-login online utilities across life, dev, encoding/decoding, encryption, images, and fun.">
 	<link rel="canonical" href="https://chdaoai.com/">
 	<link rel="icon" href="../favicon.ico" type="image/x-icon"/>
 	<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon"/>
@@ -269,53 +269,53 @@
 		</div>
 		<button class="menu-btn" onclick="toggleMenu()">☰</button>
 		<div class="nav-categories">
-			<a href="../index.html" class="nav-category">🔍 推荐工具</a>
-			<a href="../life.html" class="nav-category">🏠 生活工具</a>
-			<a href="../encry.html" class="nav-category">🔒 加密解密</a>
-			<a href="../code.html" class="nav-category">📝 编码解码</a>
-			<a href="../dev.html" class="nav-category">💻 开发工具</a>
-			<a href="../image.html" class="nav-category">🖼️ 图片处理</a>
-			<a href="../game.html" class="nav-category">🎮 娱乐工具</a>
+			<a href="../index.html" class="nav-category">🔍 Recommended</a>
+			<a href="../life.html" class="nav-category">🏠 Life Tools</a>
+			<a href="../encry.html" class="nav-category">🔒 Encryption</a>
+			<a href="../code.html" class="nav-category">📝 Encoding</a>
+			<a href="../dev.html" class="nav-category">💻 Dev Tools</a>
+			<a href="../image.html" class="nav-category">🖼️ Image Tools</a>
+			<a href="../game.html" class="nav-category">🎮 Fun Tools</a>
 		</div>
 	</div>
 </nav>
 <div class="container">
 	<div class="header">
-		<h1>文本与二进制转换工具</h1>
+		<h1>Text ⇄ Binary Converter</h1>
 	</div>
 
 	<div class="converter-box">
 		<div class="mode-selector">
-			<button class="mode-btn text-binary active" onclick="setMode('text')">文本转二进制</button>
-			<button class="mode-btn binary-text" onclick="setMode('binary')">二进制转文本</button>
+			<button class="mode-btn text-binary active" onclick="setMode('text')">Text → Binary</button>
+			<button class="mode-btn binary-text" onclick="setMode('binary')">Binary → Text</button>
 		</div>
 
-		<textarea id="inputArea" placeholder="输入文本或二进制数据..."></textarea>
+		<textarea id="inputArea" placeholder="Enter text or binary data..."></textarea>
 
 		<div class="action-buttons">
-			<button class="action-btn convert-btn" onclick="convert()">转换</button>
-			<button class="action-btn clear-btn" onclick="clearAll()">清空</button>
+			<button class="action-btn convert-btn" onclick="convert()">Convert</button>
+			<button class="action-btn clear-btn" onclick="clearAll()">Clear</button>
 		</div>
 
 		<textarea id="outputArea" readonly></textarea>
 	</div>
 
 	<div class="instructions">
-		<h3>关于文本与二进制转换工具介绍：</h3>
+		<h3>About this tool:</h3>
 		<ol>
-			<li>在计算机科学中，文本和二进制数据是信息的两种不同表示形式</li>
-			<li>文本是以字符形式表示的数据，而二进制数据是以位（0和1）序列表示的</li>
-			<li>文本到二进制的转换：
+			<li>Text and binary are two different representations of information.</li>
+			<li>Text uses characters, while binary uses sequences of bits (0 and 1).</li>
+			<li>Text to binary:
 				<ul>
-					<li>选择编码：使用ASCII编码方案</li>
-					<li>编码过程：将每个字符转换为其对应的ASCII码</li>
-					<li>转换为二进制：将ASCII码转换为8位二进制形式</li>
+					<li>Encoding: use ASCII</li>
+					<li>Process: convert each character to its ASCII code</li>
+					<li>To binary: represent ASCII codes as 8-bit binary</li>
 				</ul>
 			</li>
-			<li>二进制到文本的转换：
+			<li>Binary to text:
 				<ul>
-					<li>解析二进制数据：将二进制字符串分割成8位序列</li>
-					<li>解码过程：将每个8位二进制转换为ASCII字符</li>
+					<li>Parse: split binary string into 8-bit chunks</li>
+					<li>Decode: convert each 8 bits to ASCII</li>
 				</ul>
 			</li>
 		</ol>
@@ -334,7 +334,7 @@
 				}
 			});
 			document.getElementById('inputArea').placeholder =
-					mode === 'text' ? '输入文本...' : '输入二进制数据（每8位用空格分隔）...';
+					mode === 'text' ? 'Enter text...' : 'Enter binary (8 bits separated by spaces)...';
 			clearAll();
 		}
 
@@ -363,13 +363,13 @@
 		function binaryToText(binary) {
 			try {
 				return binary.split(' ').map(bin => {
-					if (bin.length !== 8) throw new Error('无效的二进制长度');
+					if (bin.length !== 8) throw new Error('Invalid binary length');
 					const decimal = parseInt(bin, 2);
-					if (isNaN(decimal)) throw new Error('无效的二进制数据');
+					if (isNaN(decimal)) throw new Error('Invalid binary data');
 					return String.fromCharCode(decimal);
 				}).join('');
 			} catch (e) {
-				return '错误：' + e.message;
+				return 'Error: ' + e.message;
 			}
 		}
 
