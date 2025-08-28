@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>在线图片马赛克处理工具-传道软件</title>
-    <meta name="keywords" content="在线软件工具集合、传道软件">
-    <meta name="description" content="传道软件是一款在线软件工具集合，无需登录，无需费用，用完就走的软件工具。包括生活类、开发类、编码解码、加密解密、图片类、娱乐类的软件工具结合。">
+    <title>Online Image Mosaic Tool - Chandao Tools</title>
+    <meta name="keywords" content="online tool collection, Chandao Tools">
+    <meta name="description" content="Chandao Tools is a collection of free, no-login online utilities across life, dev, encoding/decoding, encryption, images, and fun.">
     <link rel="canonical" href="https://chdaoai.com/">
     <link rel="icon" href="../../favicon.ico" type="image/x-icon"/>
     <link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon"/>
@@ -257,34 +257,34 @@
         </div>
         <button class="menu-btn" onclick="toggleMenu()">☰</button>
         <div class="nav-categories">
-            <a href="../../index.html" class="nav-category">🔍 推荐工具</a>
-            <a href="../../life.html" class="nav-category">🏠 生活工具</a>
-            <a href="../../encry.html" class="nav-category">🔒 加密解密</a>
-            <a href="../../code.html" class="nav-category">📝 编码解码</a>
-            <a href="../../dev.html" class="nav-category">💻 开发工具</a>
-            <a href="../../image.html" class="nav-category">🖼️ 图片处理</a>
-            <a href="../../game.html" class="nav-category">🎮 娱乐工具</a>
+            <a href="../../index.html" class="nav-category">🔍 Recommended</a>
+            <a href="../../life.html" class="nav-category">🏠 Life Tools</a>
+            <a href="../../encry.html" class="nav-category">🔒 Encryption</a>
+            <a href="../../code.html" class="nav-category">📝 Encoding</a>
+            <a href="../../dev.html" class="nav-category">💻 Dev Tools</a>
+            <a href="../../image.html" class="nav-category">🖼️ Image Tools</a>
+            <a href="../../game.html" class="nav-category">🎮 Fun Tools</a>
         </div>
     </div>
 </nav>
 
-<h1 style="text-align: center">在线图片马赛克处理工具</h1>
+<h1 style="text-align: center">Online Image Mosaic Tool</h1>
 <div class="container">
     <div class="frame-div">
         <div class="frame-top">
             <input type="file" id="fileBtn" accept="image/jpeg,image/gif,image/png,image/bmp,image/webp" />
         </div>
         <div class="frame-center">
-            <img id="img" alt="马赛克前图片" style="display:none;text-align: center;" />
+            <img id="img" alt="Mosaic before image" style="display:none;text-align: center;" />
         </div>
     </div>
     <div class="frame-div">
         <div class="frame-top">
             <input type="range" id="rangeInput" min="1" max="10" value="5" />
-            <input type="button" id="downloadBtn" value="下载">
+            <input type="button" id="downloadBtn" value="Download">
         </div>
         <div class="frame-center">
-            <img id="convertImg" alt="马赛克处理后的图片" style="display:none"  />
+            <img id="convertImg" alt="Mosaic processed image" style="display:none"  />
         </div>
     </div>
 </div>
@@ -305,7 +305,7 @@
             };
             reader.readAsDataURL(file);
         } else {
-            alert("您的浏览器不支持更改功能");
+            alert("Your browser does not support this feature");
         }
     });
 
@@ -328,7 +328,7 @@
         if(!!convertImg.src){
             download(convertImg.src);
         } else {
-            alert("请先上传图片");
+            alert("Please upload an image first");
         }
     });
 
